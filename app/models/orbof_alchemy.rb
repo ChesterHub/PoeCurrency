@@ -1,0 +1,2 @@
+class OrbofAlchemy < ApplicationRecord
+end

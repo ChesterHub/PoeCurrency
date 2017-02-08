@@ -1,0 +1,2 @@
+class OrbofScouring < ApplicationRecord
+end

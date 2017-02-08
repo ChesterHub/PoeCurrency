@@ -1,0 +1,2 @@
+class GemcutterPrism < ApplicationRecord
+end

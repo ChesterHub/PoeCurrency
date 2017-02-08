@@ -1,0 +1,2 @@
+class JewellerOrb < ApplicationRecord
+end

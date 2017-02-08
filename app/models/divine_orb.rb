@@ -1,0 +1,2 @@
+class DivineOrb < ApplicationRecord
+end

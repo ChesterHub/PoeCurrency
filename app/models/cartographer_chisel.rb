@@ -1,0 +1,2 @@
+class CartographerChisel < ApplicationRecord
+end

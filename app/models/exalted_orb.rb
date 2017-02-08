@@ -1,0 +1,2 @@
+class ExaltedOrb < ApplicationRecord
+end

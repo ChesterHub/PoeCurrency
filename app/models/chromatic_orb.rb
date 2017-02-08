@@ -1,0 +1,2 @@
+class ChromaticOrb < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class EternalOrb < ApplicationRecord
+end

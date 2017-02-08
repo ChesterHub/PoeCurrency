@@ -1,0 +1,2 @@
+class RegalOrb < ApplicationRecord
+end

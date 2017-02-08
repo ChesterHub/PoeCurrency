@@ -1,0 +1,2 @@
+class OrbofFusing < ApplicationRecord
+end

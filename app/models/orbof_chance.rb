@@ -1,0 +1,2 @@
+class OrbofChance < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class VaalOrb < ApplicationRecord
+end

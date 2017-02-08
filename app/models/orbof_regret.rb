@@ -1,0 +1,2 @@
+class OrbofRegret < ApplicationRecord
+end

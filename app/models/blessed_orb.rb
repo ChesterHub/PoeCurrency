@@ -1,0 +1,2 @@
+class BlessedOrb < ApplicationRecord
+end
