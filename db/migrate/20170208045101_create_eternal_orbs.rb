@@ -1,7 +1,7 @@
 class CreateEternalOrbs < ActiveRecord::Migration[5.0]
 	def change
 		create_table :eternal_orbs do |t|
-
+			t.references :league
 			t.decimal :blessed_orb
 			t.decimal :cartographer_chisel
 			t.decimal :chaos_orb

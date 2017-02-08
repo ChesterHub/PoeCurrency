@@ -1,7 +1,7 @@
 class CreateOrbofFusings < ActiveRecord::Migration[5.0]
 	def change
 		create_table :orbof_fusings do |t|
-
+			t.references :league
 			t.decimal :blessed_orb
 			t.decimal :cartographer_chisel
 			t.decimal :chaos_orb

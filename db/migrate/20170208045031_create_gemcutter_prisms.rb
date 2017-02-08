@@ -1,7 +1,7 @@
 class CreateGemcutterPrisms < ActiveRecord::Migration[5.0]
 	def change
 		create_table :gemcutter_prisms do |t|
-
+			t.references :league
 			t.decimal :blessed_orb
 			t.decimal :cartographer_chisel
 			t.decimal :chaos_orb

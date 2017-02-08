@@ -1,7 +1,7 @@
 class CreateChaosOrbs < ActiveRecord::Migration[5.0]
 	def change
 		create_table :chaos_orbs do |t|
-			
+			t.references :league
 			t.decimal :blessed_orb
 			t.decimal :cartographer_chisel
 			t.decimal :chromatic_orb
