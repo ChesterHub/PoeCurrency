@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateEternalOrbs < ActiveRecord::Migration[5.0]
+class CreateEternalOrbs < ActiveRecord::Migration[5.0]
 	def change
 		create_table :eternal_orbs do |t|
 			t.references :league

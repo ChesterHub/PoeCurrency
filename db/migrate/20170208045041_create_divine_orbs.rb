@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateDivineOrbs < ActiveRecord::Migration[5.0]
+class CreateDivineOrbs < ActiveRecord::Migration[5.0]
 	def change
 		create_table :divine_orbs do |t|
 			t.references :league

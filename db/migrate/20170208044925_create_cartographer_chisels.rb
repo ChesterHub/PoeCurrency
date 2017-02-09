@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateCartographerChisels < ActiveRecord::Migration[5.0]
+class CreateCartographerChisels < ActiveRecord::Migration[5.0]
 	def change
 		create_table :cartographer_chisels do |t|
 			t.references :league

@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateOrbofAlchemies < ActiveRecord::Migration[5.0]
+class CreateOrbofAlchemies < ActiveRecord::Migration[5.0]
 	def change
 		create_table :orbof_alchemies do |t|
 			t.references :league

@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateOrbofScourings < ActiveRecord::Migration[5.0]
+class CreateOrbofScourings < ActiveRecord::Migration[5.0]
 	def change
 		create_table :orbof_scourings do |t|
 			t.references :league

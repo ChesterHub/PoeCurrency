@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateRegalOrbs < ActiveRecord::Migration[5.0]
+class CreateRegalOrbs < ActiveRecord::Migration[5.0]
 	def change
 		create_table :regal_orbs do |t|
 			t.references :league

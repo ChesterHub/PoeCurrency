@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateOrbofRegrets < ActiveRecord::Migration[5.0]
+class CreateOrbofRegrets < ActiveRecord::Migration[5.0]
 	def change
 		create_table :orbof_regrets do |t|
 			t.references :league

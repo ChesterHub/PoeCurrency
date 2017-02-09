@@ -1,4 +1,4 @@
-, :precision => 32, :scale => 8class CreateJewellerOrbs < ActiveRecord::Migration[5.0]
+class CreateJewellerOrbs < ActiveRecord::Migration[5.0]
 	def change
 		create_table :jeweller_orbs do |t|
 			t.references :league
