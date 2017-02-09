@@ -14,47 +14,47 @@ ActiveRecord::Schema.define(version: 20170208065532) do
 
   create_table "blessed_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_blessed_orbs_on_league_id", using: :btree
   end
 
   create_table "cartographer_chisels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",      precision: 10
-    t.decimal  "chaos_orb",        precision: 10
-    t.decimal  "chromatic_orb",    precision: 10
-    t.decimal  "divine_orb",       precision: 10
-    t.decimal  "eternal_orb",      precision: 10
-    t.decimal  "exalted_orb",      precision: 10
-    t.decimal  "gemcutter_prism",  precision: 10
-    t.decimal  "jeweller_orb",     precision: 10
-    t.decimal  "orbof_alchemy",    precision: 10
-    t.decimal  "orbof_alteration", precision: 10
-    t.decimal  "orbof_chance",     precision: 10
-    t.decimal  "orbof_fusing",     precision: 10
-    t.decimal  "orbof_regret",     precision: 10
-    t.decimal  "orbof_scouring",   precision: 10
-    t.decimal  "regal_orb",        precision: 10
-    t.decimal  "vaal_orb",         precision: 10
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.decimal  "blessed_orb",      precision: 32, scale: 8
+    t.decimal  "chaos_orb",        precision: 32, scale: 8
+    t.decimal  "chromatic_orb",    precision: 32, scale: 8
+    t.decimal  "divine_orb",       precision: 32, scale: 8
+    t.decimal  "eternal_orb",      precision: 32, scale: 8
+    t.decimal  "exalted_orb",      precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",  precision: 32, scale: 8
+    t.decimal  "jeweller_orb",     precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",    precision: 32, scale: 8
+    t.decimal  "orbof_alteration", precision: 32, scale: 8
+    t.decimal  "orbof_chance",     precision: 32, scale: 8
+    t.decimal  "orbof_fusing",     precision: 32, scale: 8
+    t.decimal  "orbof_regret",     precision: 32, scale: 8
+    t.decimal  "orbof_scouring",   precision: 32, scale: 8
+    t.decimal  "regal_orb",        precision: 32, scale: 8
+    t.decimal  "vaal_orb",         precision: 32, scale: 8
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.index ["league_id"], name: "index_cartographer_chisels_on_league_id", using: :btree
   end
 
@@ -83,139 +83,139 @@ ActiveRecord::Schema.define(version: 20170208065532) do
 
   create_table "chromatic_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_chromatic_orbs_on_league_id", using: :btree
   end
 
   create_table "divine_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_divine_orbs_on_league_id", using: :btree
   end
 
   create_table "eternal_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_eternal_orbs_on_league_id", using: :btree
   end
 
   create_table "exalted_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 4, scale: 1
-    t.decimal  "cartographer_chisel", precision: 4, scale: 1
-    t.decimal  "chaos_orb",           precision: 4, scale: 1
-    t.decimal  "chromatic_orb",       precision: 4, scale: 1
-    t.decimal  "divine_orb",          precision: 4, scale: 1
-    t.decimal  "eternal_orb",         precision: 4, scale: 1
-    t.decimal  "gemcutter_prism",     precision: 4, scale: 1
-    t.decimal  "jeweller_orb",        precision: 4, scale: 1
-    t.decimal  "orbof_alchemy",       precision: 4, scale: 1
-    t.decimal  "orbof_alteration",    precision: 4, scale: 1
-    t.decimal  "orbof_chance",        precision: 4, scale: 1
-    t.decimal  "orbof_fusing",        precision: 4, scale: 1
-    t.decimal  "orbof_regret",        precision: 4, scale: 1
-    t.decimal  "orbof_scouring",      precision: 4, scale: 1
-    t.decimal  "regal_orb",           precision: 4, scale: 1
-    t.decimal  "vaal_orb",            precision: 4, scale: 1
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_exalted_orbs_on_league_id", using: :btree
   end
 
   create_table "gemcutter_prisms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_gemcutter_prisms_on_league_id", using: :btree
   end
 
   create_table "jeweller_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_jeweller_orbs_on_league_id", using: :btree
   end
 
@@ -227,185 +227,185 @@ ActiveRecord::Schema.define(version: 20170208065532) do
 
   create_table "orbof_alchemies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_orbof_alchemies_on_league_id", using: :btree
   end
 
   create_table "orbof_alterations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_orbof_alterations_on_league_id", using: :btree
   end
 
   create_table "orbof_chances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_orbof_chances_on_league_id", using: :btree
   end
 
   create_table "orbof_fusings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_orbof_fusings_on_league_id", using: :btree
   end
 
   create_table "orbof_regrets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_orbof_regrets_on_league_id", using: :btree
   end
 
   create_table "orbof_scourings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_orbof_scourings_on_league_id", using: :btree
   end
 
   create_table "regal_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "vaal_orb",            precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "vaal_orb",            precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_regal_orbs_on_league_id", using: :btree
   end
 
   create_table "vaal_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
-    t.decimal  "blessed_orb",         precision: 10
-    t.decimal  "cartographer_chisel", precision: 10
-    t.decimal  "chaos_orb",           precision: 10
-    t.decimal  "chromatic_orb",       precision: 10
-    t.decimal  "divine_orb",          precision: 10
-    t.decimal  "eternal_orb",         precision: 10
-    t.decimal  "exalted_orb",         precision: 10
-    t.decimal  "gemcutter_prism",     precision: 10
-    t.decimal  "jeweller_orb",        precision: 10
-    t.decimal  "orbof_alchemy",       precision: 10
-    t.decimal  "orbof_alteration",    precision: 10
-    t.decimal  "orbof_chance",        precision: 10
-    t.decimal  "orbof_fusing",        precision: 10
-    t.decimal  "orbof_regret",        precision: 10
-    t.decimal  "orbof_scouring",      precision: 10
-    t.decimal  "regal_orb",           precision: 10
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "blessed_orb",         precision: 32, scale: 8
+    t.decimal  "cartographer_chisel", precision: 32, scale: 8
+    t.decimal  "chaos_orb",           precision: 32, scale: 8
+    t.decimal  "chromatic_orb",       precision: 32, scale: 8
+    t.decimal  "divine_orb",          precision: 32, scale: 8
+    t.decimal  "eternal_orb",         precision: 32, scale: 8
+    t.decimal  "exalted_orb",         precision: 32, scale: 8
+    t.decimal  "gemcutter_prism",     precision: 32, scale: 8
+    t.decimal  "jeweller_orb",        precision: 32, scale: 8
+    t.decimal  "orbof_alchemy",       precision: 32, scale: 8
+    t.decimal  "orbof_alteration",    precision: 32, scale: 8
+    t.decimal  "orbof_chance",        precision: 32, scale: 8
+    t.decimal  "orbof_fusing",        precision: 32, scale: 8
+    t.decimal  "orbof_regret",        precision: 32, scale: 8
+    t.decimal  "orbof_scouring",      precision: 32, scale: 8
+    t.decimal  "regal_orb",           precision: 32, scale: 8
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.index ["league_id"], name: "index_vaal_orbs_on_league_id", using: :btree
   end
 
