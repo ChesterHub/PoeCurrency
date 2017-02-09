@@ -1,23 +1,23 @@
-class CreateCartographerChisels < ActiveRecord::Migration[5.0]
+, :precision => 32, :scale => 8class CreateCartographerChisels < ActiveRecord::Migration[5.0]
 	def change
 		create_table :cartographer_chisels do |t|
 			t.references :league
-			t.decimal :blessed_orb
-			t.decimal :chaos_orb
-			t.decimal :chromatic_orb
-			t.decimal :divine_orb
-			t.decimal :eternal_orb
-			t.decimal :exalted_orb
-			t.decimal :gemcutter_prism
-			t.decimal :jeweller_orb
-			t.decimal :orbof_alchemy
-			t.decimal :orbof_alteration
-			t.decimal :orbof_chance
-			t.decimal :orbof_fusing
-			t.decimal :orbof_regret
-			t.decimal :orbof_scouring
-			t.decimal :regal_orb
-			t.decimal :vaal_orb
+			t.decimal :blessed_orb, :precision => 32, :scale => 8
+			t.decimal :chaos_orb, :precision => 32, :scale => 8
+			t.decimal :chromatic_orb, :precision => 32, :scale => 8
+			t.decimal :divine_orb, :precision => 32, :scale => 8
+			t.decimal :eternal_orb, :precision => 32, :scale => 8
+			t.decimal :exalted_orb, :precision => 32, :scale => 8
+			t.decimal :gemcutter_prism, :precision => 32, :scale => 8
+			t.decimal :jeweller_orb, :precision => 32, :scale => 8
+			t.decimal :orbof_alchemy, :precision => 32, :scale => 8
+			t.decimal :orbof_alteration, :precision => 32, :scale => 8
+			t.decimal :orbof_chance, :precision => 32, :scale => 8
+			t.decimal :orbof_fusing, :precision => 32, :scale => 8
+			t.decimal :orbof_regret, :precision => 32, :scale => 8
+			t.decimal :orbof_scouring, :precision => 32, :scale => 8
+			t.decimal :regal_orb, :precision => 32, :scale => 8
+			t.decimal :vaal_orb, :precision => 32, :scale => 8
 
 			t.timestamps
 		end
