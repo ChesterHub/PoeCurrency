@@ -16,4 +16,11 @@ class League < ApplicationRecord
 	has_many :orbof_scourings
 	has_many :regal_orbs
 	has_many :vaal_orbs
+	has_many :scrollof_wisdom
+	has_many :portal_scroll
+	has_many :armourer_scrap
+	has_many :blacksmith_whetstone
+	has_many :glassblower_bubble
+	has_many :orbof_transmutation
+	has_many :orbof_augmentation
 end

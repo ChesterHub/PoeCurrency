@@ -18,6 +18,13 @@ class CreateExaltedOrbs < ActiveRecord::Migration[5.0]
 			t.decimal :orbof_scouring, :precision => 32, :scale => 8
 			t.decimal :regal_orb, :precision => 32, :scale => 8
 			t.decimal :vaal_orb, :precision => 32, :scale => 8
+			t.decimal :scrollof_wisdom, :precision => 32, :scale => 8
+			t.decimal :portal_scroll, :precision => 32, :scale => 8
+			t.decimal :armourer_scrap, :precision => 32, :scale => 8
+			t.decimal :blacksmith_whetstone, :precision => 32, :scale => 8
+			t.decimal :glassblower_bubble, :precision => 32, :scale => 8
+			t.decimal :orbof_transmutation, :precision => 32, :scale => 8
+			t.decimal :orbof_augmentation, :precision => 32, :scale => 8
 
 			t.timestamps
 		end

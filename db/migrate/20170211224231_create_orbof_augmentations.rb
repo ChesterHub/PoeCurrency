@@ -1,7 +1,7 @@
-class CreateGemcutterPrisms < ActiveRecord::Migration[5.0]
-	def change
-		create_table :gemcutter_prisms do |t|
-			t.references :league
+class CreateOrbofAugmentations < ActiveRecord::Migration[5.0]
+  def change
+    create_table :orbof_augmentations do |t|
+    		t.references :league
 			t.decimal :blessed_orb, :precision => 32, :scale => 8
 			t.decimal :cartographer_chisel, :precision => 32, :scale => 8
 			t.decimal :chaos_orb, :precision => 32, :scale => 8
@@ -9,6 +9,7 @@ class CreateGemcutterPrisms < ActiveRecord::Migration[5.0]
 			t.decimal :divine_orb, :precision => 32, :scale => 8
 			t.decimal :eternal_orb, :precision => 32, :scale => 8
 			t.decimal :exalted_orb, :precision => 32, :scale => 8
+			t.decimal :gemcutter_prism, :precision => 32, :scale => 8
 			t.decimal :jeweller_orb, :precision => 32, :scale => 8
 			t.decimal :orbof_alchemy, :precision => 32, :scale => 8
 			t.decimal :orbof_alteration, :precision => 32, :scale => 8
@@ -24,9 +25,8 @@ class CreateGemcutterPrisms < ActiveRecord::Migration[5.0]
 			t.decimal :blacksmith_whetstone, :precision => 32, :scale => 8
 			t.decimal :glassblower_bubble, :precision => 32, :scale => 8
 			t.decimal :orbof_transmutation, :precision => 32, :scale => 8
-			t.decimal :orbof_augmentation, :precision => 32, :scale => 8
 
-			t.timestamps
-		end
-	end
+      t.timestamps
+    end
+  end
 end
