@@ -2,6 +2,7 @@ class CreateChaosOrbs < ActiveRecord::Migration[5.0]
 	def change
 		create_table :chaos_orbs do |t|
 			t.references :league
+			t.string :ign
 			t.decimal :blessed_orb, :precision => 32, :scale => 8
 			t.decimal :cartographer_chisel, :precision => 32, :scale => 8
 			t.decimal :chromatic_orb, :precision => 32, :scale => 8

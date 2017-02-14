@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "armourer_scraps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "blacksmith_whetstones", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",         precision: 32, scale: 8
     t.decimal  "cartographer_chisel", precision: 32, scale: 8
     t.decimal  "chaos_orb",           precision: 32, scale: 8
@@ -74,6 +76,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "blessed_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
     t.decimal  "chromatic_orb",        precision: 32, scale: 8
@@ -104,6 +107,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "cartographer_chisels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
     t.decimal  "chromatic_orb",        precision: 32, scale: 8
@@ -134,6 +138,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "chaos_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chromatic_orb",        precision: 32, scale: 8
@@ -164,6 +169,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "chromatic_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -194,6 +200,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "divine_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -224,6 +231,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "eternal_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -254,6 +262,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "exalted_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -284,6 +293,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "gemcutter_prisms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -314,6 +324,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "glassblower_bubbles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -344,6 +355,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "jeweller_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -380,6 +392,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_alchemies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -410,6 +423,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_alterations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -440,6 +454,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_augmentations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -470,6 +485,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_chances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -500,6 +516,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_fusings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -530,6 +547,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_regrets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -560,6 +578,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_scourings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -590,6 +609,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "orbof_transmutations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -620,6 +640,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "portal_scrolls", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -650,6 +671,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "regal_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -680,6 +702,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "scrollof_wisdoms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8
@@ -710,6 +733,7 @@ ActiveRecord::Schema.define(version: 20170211225021) do
 
   create_table "vaal_orbs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "league_id"
+    t.string   "ign"
     t.decimal  "blessed_orb",          precision: 32, scale: 8
     t.decimal  "cartographer_chisel",  precision: 32, scale: 8
     t.decimal  "chaos_orb",            precision: 32, scale: 8

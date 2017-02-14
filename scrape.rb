@@ -3,37 +3,54 @@ require 'nokogiri'
 
 url = "http://currency.poe.trade/search?league=Breach&online=&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23"
 
-test_url = "http://currency.poe.trade/search?league=Breach&online=x&want=1-2-3-4-5-6&have=1-2-3-4-5-6"
+test_url = "http://currency.poe.trade/search?league=Breach&online=&want=1-2-3-4-5-6&have=1-2-3-4-5-6"
 
-document = open(test_url)
+document = open(url)
 content = document.read
 parsed_content = Nokogiri::HTML(content)
 
-# puts parsed_content.css('.displayoffer').css('.displayoffer-primary').css('.currency-name').length
+# Create array of divs that contain the information of currency that we need
+parsed_currency = parsed_content.css('.displayoffer').css('.row')
 
-currency_array = parsed_content.css('.displayoffer').css('.row').css('.large-6').css('.displayoffer-primary')
+# Specifically parse currency conversion info
+currency_array = parsed_currency.css('.large-6').css('.displayoffer-primary')
 
+#Specifically parse for IGN
+ign_array = parsed_currency.css('.large-12').css('.displayoffer-bottom').css('a')
 
-def show_currency(arr)
-	arr.each do |div|
+def parse_ign(ign_array)
+	igns = []
+	ign_array.each do |a|
+		if a.text.downcase == "contact seller"
+		else
+			igns << a.text.split(" ")[1]
+		end
+	end
+	return igns
+end
+
+def show_currency(currency_arr, ign_arr)
+	if ign_arr.length == currency_arr.length
+	ign_increment = 0
+	currency_arr.each do |div|
+		ign = ign_arr[ign_increment]
 		currency_receiving = div.css('.currency-name')[0].inner_text.strip!
 		currency_offering = div.css('.currency-name')[1].inner_text.strip!
 		value = div.css('.displayoffer-middle').inner_text.split(' ')
 
-		puts "#{value[2]} #{currency_offering}(s) will get you #{value[0]} #{currency_receiving}(s)"
+		puts "#{value[2]} #{currency_offering}(s) will get you #{value[0]} #{currency_receiving}(s)."
+		puts "Message: #{ign} to trade."
 		puts "---------------------------------------------------------------------------"
+		ign_increment += 1
 	end
-
-	p arr.length
+	else
+		puts "Parsing Failed."
+	end
+	puts currency_arr.length
+	puts ign_arr.length
 end
 
-show_currency(currency_array)
+igns = parse_ign(ign_array)
+show_currency(currency_array, igns)
 
-# p currency_array[0].css(".currency-name").inner_text
-# p currency_array[0].css('.displayoffer-middle').inner_text.split(' ')
-# puts "----------------------------------"
-# puts currency_array[2].css('.currency-name').inner_text
-# puts "----------------------------------"
-# puts currency_array[3].css('.currency-name').inner_text
 
-# puts currency_array.length

@@ -2,6 +2,7 @@ class CreateCartographerChisels < ActiveRecord::Migration[5.0]
 	def change
 		create_table :cartographer_chisels do |t|
 			t.references :league
+			t.string :ign
 			t.decimal :blessed_orb, :precision => 32, :scale => 8
 			t.decimal :chaos_orb, :precision => 32, :scale => 8
 			t.decimal :chromatic_orb, :precision => 32, :scale => 8

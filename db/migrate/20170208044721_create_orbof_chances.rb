@@ -2,6 +2,7 @@ class CreateOrbofChances < ActiveRecord::Migration[5.0]
 	def change
 		create_table :orbof_chances do |t|
 			t.references :league
+			t.string :ign
 			t.decimal :blessed_orb, :precision => 32, :scale => 8
 			t.decimal :cartographer_chisel, :precision => 32, :scale => 8
 			t.decimal :chaos_orb, :precision => 32, :scale => 8
