@@ -1,5 +1,8 @@
 class CartographerChisel < ApplicationRecord
 	belongs_to :league
+
+	validates :ign, presence: true
+	validates :league_id, presence: true
 	# has_one :blessed_orb
 	# has_one :chaos_orb
 	# has_one :chromatic_orb

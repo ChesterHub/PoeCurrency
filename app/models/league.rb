@@ -23,4 +23,6 @@ class League < ApplicationRecord
 	has_many :glassblower_bubble
 	has_many :orbof_transmutation
 	has_many :orbof_augmentation
+
+	validates :league_type, presence: true
 end

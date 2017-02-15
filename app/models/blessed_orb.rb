@@ -1,5 +1,8 @@
 class BlessedOrb < ApplicationRecord
 	belongs_to :league
+
+	validates :ign, presence: true
+	validates :league_id, presence: true
 	# has_one :cartopgrapher_chisel
 	# has_one :chaos_orb
 	# has_one :chromatic_orb
