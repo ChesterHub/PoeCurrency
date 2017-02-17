@@ -1,10 +1,10 @@
 require 'open-uri'
 require 'nokogiri'
 
-url = "http://currency.poe.trade/search?league=Breach&online=&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23"
-
+breach_url = "http://currency.poe.trade/search?league=Breach&online=&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23"
 test_url = "http://currency.poe.trade/search?league=Breach&online=&want=1-2-3-4-5-6&have=1-2-3-4-5-6"
 
+puts "Mining data...."
 document = open(test_url)
 content = document.read
 parsed_content = Nokogiri::HTML(content)
@@ -47,6 +47,7 @@ poe_currency_hash = {
 
 def parse_ign(ign_array)
 	igns = []
+	puts "Generating IGNs...."
 	ign_array.each do |a|
 		if a.text.downcase == "contact seller"
 		else
@@ -68,7 +69,7 @@ def show_currency(currency_arr, ign_arr, currency_hash)
 			if currency_hash[currency_offering]
 				puts currency_hash[currency_offering]
 				puts "#{value[2]} #{currency_offering}(s) will get you #{value[0]} #{currency_receiving}(s)."
-				puts "Message: #{ign} to trade."
+				puts "Message: #{ign} to trade."f
 				puts "---------------------------------------------------------------------------"
 			end
 			ign_increment += 1
@@ -78,6 +79,11 @@ def show_currency(currency_arr, ign_arr, currency_hash)
 	end
 	puts currency_arr.length
 	puts ign_arr.length
+end
+
+
+def save_record()
+	
 end
 
 igns = parse_ign(ign_array)
