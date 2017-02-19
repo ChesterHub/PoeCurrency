@@ -69,7 +69,7 @@ def show_currency(currency_arr, ign_arr, currency_hash)
 			if currency_hash[currency_offering]
 				puts currency_hash[currency_offering]
 				puts "#{value[2]} #{currency_offering}(s) will get you #{value[0]} #{currency_receiving}(s)."
-				puts "Message: #{ign} to trade."f
+				puts "Message: #{ign} to trade."
 				puts "---------------------------------------------------------------------------"
 			end
 			ign_increment += 1
@@ -83,7 +83,6 @@ end
 
 
 def save_record()
-	
 end
 
 igns = parse_ign(ign_array)

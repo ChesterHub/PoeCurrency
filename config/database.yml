@@ -14,7 +14,7 @@ development:
  database: library_development
  pool: 5
  username: root
- password: password
+ password: yezzir1
  host: 127.0.0.1
  port: 3306
  # socket: /tmp/mysql.sock
@@ -27,7 +27,7 @@ test:
  database: library_test
  pool: 5
  username: root
- password: password
+ password: yezzir1
  host: 127.0.0.1
  port: 3306
  # socket: /tmp/mysql.sock
@@ -37,7 +37,7 @@ test:
   database: library_production
   pool: 5
   username: root
-  password: password
+  password: yezzir1
   host: 127.0.0.1
   port: 3306
   # socket: /tmp/mysql.sock
