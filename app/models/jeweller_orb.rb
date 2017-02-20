@@ -1,22 +1,31 @@
 class JewellerOrb < ApplicationRecord
 	belongs_to :league
 
-	validates :ign, presence: true
 	validates :league_id, presence: true
-	# has_one :blessed_orb
-	# has_one :cartopgrapher_chisel
-	# has_one :chaos_orb
-	# has_one :chromatic_orb
-	# has_one :divine_orb
-	# has_one :eternal_orb
-	# has_one :exalted_orb
-	# has_one :gemcutter_prism
-	# has_one :orbof_alchemy
-	# has_one :orbof_alteration
-	# has_one :orbof_chance
-	# has_one :orbof_fusing
-	# has_one :orbof_regret
-	# has_one :orbof_scouring
-	# has_one :regal_orb
-	# has_one :vaal_orb
+	validates :ign, presence: true, uniqueness: {scope: [
+		:league_id,
+		:armourer_scrap,
+		:blacksmith_whetstone,
+		:blessed_orb,
+		:cartographer_chisel,
+		:chaos_orb,
+		:chromatic_orb,
+		:divine_orb,
+		:eternal_orb,
+		:exalted_orb,
+		:gemcutter_prism,
+		:glassblower_bubble,
+		:orbof_alchemy,
+		:orbof_alteration,
+		:orbof_augmentation,
+		:orbof_chance,
+		:orbof_fusing,
+		:orbof_regret,
+		:orbof_scouring,
+		:orbof_transmutation,
+		:portal_scroll,
+		:regal_orb,
+		:scrollof_wisdom,
+		:vaal_orb
+		]}
 end
