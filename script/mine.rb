@@ -75,7 +75,7 @@ def parse_html(league)
 	test_url = "http://currency.poe.trade/search?league=#{league}&online=&want=1-2-3-4-5&have=1-2-3-4-5"
 
 	puts "Mining in #{league} league...."
-	document = open(eternal_url)
+	document = open(url)
 	content = document.read
 	parsed_doc = Nokogiri::HTML(content)
 
@@ -109,7 +109,8 @@ def generate_currency(doc)
 	puts "Generating Currency..."
 	currency_array.each do |div|
 		currency_offering = div.css('.currency-name')[1].inner_text.strip!
-		trade_ratio = div.css('.displayoffer-middle').inner_text.split(' ')[0]
+		trade_values = div.css('.displayoffer-middle').inner_text.split(' ')
+		trade_ratio = trade_values[0].to_f / trade_values[2].to_f
 		currency_receiving = div.css('.currency-name')[0].inner_text.strip!
 
 		if currency_receiving != currency_offering
@@ -161,9 +162,11 @@ end
 def start_mining(league_array, currency_offering_array, currency_receiving_array)
 
 	league_array.each_with_index do |league, ind|
-		parsed_info = parse_html(league)
-		timer = sleep(rand(2..20))
+		timer = rand(2..20)
 		puts "Waiting #{timer} seconds..."
+		sleep(timer)
+		puts "Opening Url...."
+		parsed_info = parse_html(league)
 		records = organize_records(
 			ind,
 			generate_igns(parsed_info),
