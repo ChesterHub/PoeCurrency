@@ -70,12 +70,12 @@ currency_receiving = {
 # ORGANIZE AND VALIDATE CURRENCY RECORD
 # SAVE RECORD IN DATABASE
 def parse_html(league)
-	url = "http://currency.poe.trade/search?league=#{league}&online=&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23"
+	url = "http://currency.poe.trade/search?league=#{league}&online=&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25"
 
 	test_url = "http://currency.poe.trade/search?league=#{league}&online=&want=1-2-3-4-5&have=1-2-3-4-5"
 
 	puts "Mining in #{league} league...."
-	document = open(test_url)
+	document = open(eternal_url)
 	content = document.read
 	parsed_doc = Nokogiri::HTML(content)
 
@@ -162,6 +162,8 @@ def start_mining(league_array, currency_offering_array, currency_receiving_array
 
 	league_array.each_with_index do |league, ind|
 		parsed_info = parse_html(league)
+		timer = sleep(rand(2..20))
+		puts "Waiting #{timer} seconds..."
 		records = organize_records(
 			ind,
 			generate_igns(parsed_info),
