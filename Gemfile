@@ -53,3 +53,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'thor', '0.19.1'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'faker'
+gem 'react-rails'
