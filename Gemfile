@@ -54,3 +54,6 @@ gem 'thor', '0.19.1'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'faker'
 gem 'react-rails'
+
+gem 'sidekiq'
+gem 'sinatra', github: 'sinatra/sinatra'
