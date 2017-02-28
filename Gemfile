@@ -57,3 +57,8 @@ gem 'react-rails'
 
 gem 'sidekiq'
 gem 'sinatra', github: 'sinatra/sinatra'
+
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'

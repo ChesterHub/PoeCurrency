@@ -1,4 +1,4 @@
-require File.expand_path('../../PoeCurrency/config/environment',  __FILE__)
+require File.expand_path('../../config/environment',  __FILE__)
 
 poe_currency_hash = {
 	"armour..." => "ArmourerScrap",
@@ -27,10 +27,11 @@ poe_currency_hash = {
 	"vaal" => "VaalOrb"
 }
 
-receiving = "exalted_orb"
-offering = "ChaosOrb"
-num = 0.0143
+# receiving = "exalted_orb"
+# offering = "ChaosOrb"
+# num = 0.0143
+# orb = ChaosOrb.create!(receiving => num, :ign => "lets go!", :league_id => 3)
 
-orb = ChaosOrb.create!(receiving => num, :ign => "lets go!", :league_id => 3)
+$redis.set("test3",poe_currency_hash)
 
-# eval("ChaosOrb.Create(receiving => num)")
+
