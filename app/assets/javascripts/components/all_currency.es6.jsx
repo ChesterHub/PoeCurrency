@@ -13,7 +13,7 @@ class AllCurrency extends React.Component {
     return (
 
     	<div>
-    		<h3>Currency Table</h3>
+    		<h3>General Currency Table</h3>
     		<table>
     		<tr>
     			<th></th>
@@ -21,7 +21,6 @@ class AllCurrency extends React.Component {
     			<th>Chaos Orb</th>
     			<th>Chromatic Orb</th>
     			<th>Divine Orb</th>
-    			<th>Eternal Orb</th>
     			<th>Exalted Orb</th>
     			<th>Jeweller's Orb</th>
     			<th>Orb of Alchemy</th>
@@ -48,7 +47,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -75,7 +73,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -102,7 +99,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -129,7 +125,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -151,12 +146,10 @@ class AllCurrency extends React.Component {
     			<td>Scroll of Wisdom</td>
     		</tr>
     		<tr>
-    			<th>Eternal Orb</th>
     			<td>Blessed Orb</td>
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -183,7 +176,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -210,7 +202,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -237,7 +228,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -264,7 +254,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -291,7 +280,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -318,7 +306,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -345,7 +332,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -372,7 +358,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -399,7 +384,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -426,7 +410,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -453,7 +436,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -480,7 +462,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -507,7 +488,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -534,7 +514,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -561,7 +540,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -588,7 +566,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -615,7 +592,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -642,7 +618,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
@@ -669,7 +644,6 @@ class AllCurrency extends React.Component {
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
-    			<td>Eternal Orb</td>
     			<td>Exalted Orb</td>
     			<td>Jeweller's Orb</td>
     			<td>Orb of Alchemy</td>
