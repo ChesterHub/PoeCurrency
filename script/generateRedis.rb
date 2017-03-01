@@ -131,8 +131,6 @@ def generate_averages(currency_array, averages_array, league_num_hash, validate_
 
 end
 
-
-
 def save_to_redis(data_hash)
 	$redis.del("currency")
 	hashish = data_hash.to_json

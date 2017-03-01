@@ -2,7 +2,7 @@ class CurrencyController < ApplicationController
 
   def index
   	# CurrencyWorker.perform_async()
-  	@currency = $redis.get("currency")
+  	@currency = JSON.parse($redis.get("currency"))
   end
 
   def show

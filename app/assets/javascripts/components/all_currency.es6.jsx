@@ -15,6 +15,7 @@ class AllCurrency extends React.Component {
     	<div>
     		<h3>General Currency Table</h3>
     		<table>
+            <tbody>
     		<tr>
     			<th></th>
     			<th>Blessed Orb</th>
@@ -43,7 +44,7 @@ class AllCurrency extends React.Component {
     		</tr>
     		<tr>
     			<th>Blessed Orb</th>
-    			<td></td>
+    			<td>{this.props.currency.currency}</td>
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>
@@ -664,7 +665,7 @@ class AllCurrency extends React.Component {
     			<td>Portal Scroll</td>
     			<td>Scroll of Wisdom</td>
     		</tr>
-
+            </tbody>
     			
     		</table>
     	</div>
