@@ -20,12 +20,17 @@ class Currency extends React.Component {
 	this.setState({currency_receive: receive})
 	}
 
+    changeLeague(event){
+        const change = event.target.value;
+        this.setState({league: change})
+    }
+
   render () {
     return (
 
     	<div>
     		<h3>Choose league:</h3>
-    		<form>
+    		<form value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select>
     				<option value="standard">Standard</option>
     				<option value="hardcore">Hardcore</option>

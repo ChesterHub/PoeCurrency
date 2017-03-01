@@ -1,13 +1,13 @@
 class AllCurrency extends React.Component {
-	constructor(props){
-		super(props)
-		this.state = {
-			visible: false,
-			currency_offer: "Chaos Orb",
-			currency_receive: "Exalted Orb",
-			amount: 0.0143
-		}
-	}
+	// constructor(props){
+	// 	super(props)
+	// 	this.state = {
+	// 		visible: false,
+	// 		currency_offer: "Chaos Orb",
+	// 		currency_receive: "Exalted Orb",
+	// 		league: {this.props.}
+	// 	}
+	// }
 
   render () {
     return (
@@ -43,7 +43,7 @@ class AllCurrency extends React.Component {
     		</tr>
     		<tr>
     			<th>Blessed Orb</th>
-    			<td>Blessed Orb</td>
+    			<td></td>
     			<td>Chaos Orb</td>
     			<td>Chromatic Orb</td>
     			<td>Divine Orb</td>

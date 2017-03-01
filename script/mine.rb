@@ -64,11 +64,6 @@ currency_receiving = {
 	"vaal" => :vaal_orb
 }
 
-# PARSE DOCUMENT BASED ON LEAGUE
-# GENERATE IGNS
-# GENERATE CURRENCY
-# ORGANIZE AND VALIDATE CURRENCY RECORD
-# SAVE RECORD IN DATABASE
 def parse_html(league)
 	url = "http://currency.poe.trade/search?league=#{league}&online=&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25"
 
@@ -156,7 +151,7 @@ def create_records(record_array)
 			hashish[:receiving] => hashish[:trade_ratio]
 			)
 	end
-	puts "#{record_array.length} records saved in database."
+	puts "#{record_array.length} records created. Note: Only unique records saved to DB"
 end
 
 def start_mining(league_array, currency_offering_array, currency_receiving_array)
