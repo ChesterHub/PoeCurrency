@@ -3,16 +3,16 @@ class Currency extends React.Component {
 		super(props)
 		this.state = {
 			visible: false,
-			league: "standard",
-			currency_offer: "Chaos Orb",
-			currency_receive: "",
+			league: "Breach",
+			currency_offer: "ChaosOrb",
+			currency_receive: "exalted_orb",
 		}
 	}
 
     componentDidMount(event){
         // after render, function runs
         // this.setState({all: this.props.currency})
-        // console.log(this.props.currency.Breach.ChaosOrb.armourer_scrap)
+        // console.log(this.props.currency.Breach.ChaosOrb.armourer_scrap)    
     }
 
 	offerCurrency(event){
@@ -30,11 +30,16 @@ class Currency extends React.Component {
         this.setState({league: change})
     }
 
+    valueRatio(){
+        let final = this.props.currency[this.state.league][this.state.currency_offer][this.state.currency_receive]
+        return final
+    }
+
   render () {
-    let cur = this.props.currency.Breach.ChaosOrb.armourer_scrap
+    let value = this.valueRatio()
     return (
     	<div>
-        <p>{cur}</p>
+        <p>{value}</p>
     		<h3>Choose league:</h3>
     		<form value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select>
@@ -44,12 +49,12 @@ class Currency extends React.Component {
                     </optgroup>
                     <optgroup label="Old">
     				<option value="Breach">Breach</option>
-    				<option value="Breach+Hardcore">Hardcore Breach</option>
+    				<option value="Hardcore+Breach">Hardcore Breach</option>
                     </optgroup>
     			</select>
     		</form>
     		<h3>Choose your currency:</h3>
-    		<p>1 {this.state.currency_offer}, on average, will net you {this.state.amount} {this.state.currency_receive}.</p>
+    		<p>1 {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
     		<form>
     			For 1: 
     				<select onChange={this.offerCurrency.bind(this)}>
