@@ -32,6 +32,27 @@ poe_currency_hash = {
 # num = 0.0143
 # orb = ChaosOrb.create!(receiving => num, :ign => "lets go!", :league_id => 3)
 
-$redis.set("test3",poe_currency_hash)
+# $redis.set("test3",poe_currency_hash)
+
+# league_types = [
+# 	"Standard",
+# 	"Hardcore",
+# 	"Breach",
+# 	"Hardcore+Breach"
+# ]
+
+# hashish = {}
+
+# p hashish
+# league_types.each do |el|
+# 	hashish[el] = {}
+# end
+# p hashish
+
+y = ChaosOrb.where(league_id: 3).average(:exalted_orb).to_f
+p y
+
+
+
 
 
