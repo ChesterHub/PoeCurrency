@@ -122,7 +122,7 @@ def generate_averages(currency_array, averages_array, league_num_hash, validate_
 
 			averages_array.each do |c|
 				if validate_hash[main_currency] != c
-					avg = main_currency.where(league_id: league_num).average(c).to_f
+					avg = main_currency.where(league_id: league_num).average(c).to_f.round(5)
 					currency_value[c.to_s] = avg
 				end
 			end
@@ -133,18 +133,23 @@ end
 
 
 
-def start_redis_data(league_a, currency_a, avg_a)
-
+def save_to_redis(data_hash)
+	$redis.del("currency")
+	hashish = data_hash.to_json
+	$redis.set("currency", hashish)
 end
 
-p hashish = generate_league(league_types)
-puts "*************" * 10
-p new_hashish = generate_orbs(currency, hashish)
-puts "*************" * 10
-final_hashish = generate_averages(currency, averages, league_num_hash, validate_hash, new_hashish)
+def start_redis_generation(league_types, league_num_hash, currency, averages, validate_hash)
+	puts "Generating hash of leagues and orbs..."
+	hashish = generate_orbs(currency, generate_league(league_types))
+	puts "calculating averages from DB..."
+	hashish = generate_averages(currency, averages, league_num_hash, validate_hash, hashish)
+	puts "Saving data to Redis server..."
+	save_to_redis(hashish)
+	puts "WE GUCCI"
+end
 
-final_hashish.each {|y| p y; p "*" * 20}
-
+start_redis_generation(league_types, league_num_hash, currency, averages, validate_hash)
 
 
 
