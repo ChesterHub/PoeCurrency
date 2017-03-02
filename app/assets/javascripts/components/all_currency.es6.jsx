@@ -1,13 +1,24 @@
 class AllCurrency extends React.Component {
-	// constructor(props){
-	// 	super(props)
-	// 	this.state = {
-	// 		visible: false,
-	// 		currency_offer: "Chaos Orb",
-	// 		currency_receive: "Exalted Orb",
-	// 		league: {this.props.}
-	// 	}
-	// }
+        constructor(props){
+        super(props)
+        this.state = {
+            league: "Breach",
+            currencyName: "",
+
+
+        }
+    }
+
+    addTD(orb){
+        theOrb = this.props.currency[this.state.league][orb]
+        for (let ratio in theOrb){
+            if (theOrb.hasOwnProperty(ratio)) {
+                ReactDOM.renderToString(theOrb[ratio])
+            }
+        }
+    }
+  
+
 
   render () {
     return (
@@ -43,30 +54,9 @@ class AllCurrency extends React.Component {
     			<th>Scroll of Wisdom</th>
     		</tr>
     		<tr>
-    			<th>Blessed Orb</th>
-    			<td>{this.props.currency.currency}</td>
-    			<td>Chaos Orb</td>
-    			<td>Chromatic Orb</td>
-    			<td>Divine Orb</td>
-    			<td>Exalted Orb</td>
-    			<td>Jeweller's Orb</td>
-    			<td>Orb of Alchemy</td>
-    			<td>Orb of Alteration</td>
-    			<td>Orb of Augmentation</td>
-    			<td>Orb of Chance</td>
-    			<td>Orb of Fusing</td>
-    			<td>Orb of Regret</td>
-    			<td>Orb of Scouring</td>
-    			<td>Orb of Transmutation</td>
-    			<td>Regal Orb</td>
-    			<td>Vaal Orb</td>
-    			<td>Armourer's Scrap</td>
-    			<td>Blackmitd's Whetstone</td>
-    			<td>Cartographer's Chisel</td>
-    			<td>Gemcutter's Prism</td>
-    			<td>Glassblower's Bauble</td>
-    			<td>Portal Scroll</td>
-    			<td>Scroll of Wisdom</td>
+    			<th id="blessed">Blessed Orb</th>
+                {this.addTD("BlessedOrb")}
+
     		</tr>
     		<tr>
     			<th>Chaos Orb</th>

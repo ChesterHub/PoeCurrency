@@ -9,10 +9,7 @@ class Currency extends React.Component {
 		}
 	}
 
-    componentDidMount(event){
-        // after render, function runs
-        // this.setState({all: this.props.currency})
-        // console.log(this.props.currency.Breach.ChaosOrb.armourer_scrap)    
+    componentDidMount(event){   
     }
 
 	offerCurrency(event){
@@ -31,15 +28,16 @@ class Currency extends React.Component {
     }
 
     valueRatio(){
-        let final = this.props.currency[this.state.league][this.state.currency_offer][this.state.currency_receive]
-        return final
+        let ratio = this.props.currency[this.state.league][this.state.currency_offer][this.state.currency_receive]
+        return ratio
     }
 
   render () {
+
     let value = this.valueRatio()
+
     return (
     	<div>
-        <p>{value}</p>
     		<h3>Choose league:</h3>
     		<form value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select>
@@ -54,7 +52,6 @@ class Currency extends React.Component {
     			</select>
     		</form>
     		<h3>Choose your currency:</h3>
-    		<p>1 {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
     		<form>
     			For 1: 
     				<select onChange={this.offerCurrency.bind(this)}>
@@ -120,6 +117,7 @@ class Currency extends React.Component {
     			 	</select>
     			<input type="submit" value="Search"/>
     		</form>
+            <p>1 {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
     	</div>
     	);
   }
