@@ -1,15 +1,12 @@
 class AllCurrency extends React.Component {
         constructor(props){
         super(props)
-        this.state = {
-            league: "Breach"
-        }
     }
 
     addTD(orb, matchingInd){
         let rows = []
         let rowCounter = 0
-        theOrb = this.props.currency[this.state.league][orb]
+        theOrb = this.props.currency[this.props.league][orb]
         for (let ratio in theOrb){
             if (theOrb.hasOwnProperty(ratio)) {
                 if (rowCounter === matchingInd){
@@ -28,7 +25,6 @@ class AllCurrency extends React.Component {
         }
         return rows
     }
-
 
   render () {
     return (
@@ -157,7 +153,6 @@ class AllCurrency extends React.Component {
                 {this.addTD("VaalOrb", 22).map((ratio, index) => <td key={index}>{ratio}</td>)}
             </tr>
             </tbody>
-    			
     		</table>
     	</div>
     	);

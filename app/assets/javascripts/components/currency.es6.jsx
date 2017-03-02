@@ -3,7 +3,7 @@ class Currency extends React.Component {
 		super(props)
 		this.state = {
 			visible: false,
-			league: "Breach",
+			league: "Standard",
 			currency_offer: "ChaosOrb",
 			currency_receive: "exalted_orb",
 		}
@@ -118,6 +118,9 @@ class Currency extends React.Component {
     			<input type="submit" value="Search"/>
     		</form>
             <p>1 {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
+            <div>
+                <AllCurrency currency={this.props.currency} league={this.state.league} />
+            </div>
     	</div>
     	);
   }
