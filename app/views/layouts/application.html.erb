@@ -6,9 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'sdata-turbolinks-track': 'reload' %>
+    <link href="/theme/cover.css" rel="stylesheet">
   </head>
 
   <body>
     <%= yield %>
+    <script src="theme/bootstrap.min.js"></script>
   </body>
 </html>
