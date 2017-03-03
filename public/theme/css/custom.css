@@ -18,6 +18,12 @@
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#logo {
+	padding-left: 100px;
+	padding-top: 150px;
+	position: absolute;
+}
+
 /*#circle-button {
 	font-size: 200%;
 }*/
@@ -25,6 +31,7 @@
 p {
 	color: #C0C0C0
 }
+
 
 .currency {
 	margin-top: 80px;
