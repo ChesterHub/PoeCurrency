@@ -37,10 +37,10 @@ class Currency extends React.Component {
     let value = this.valueRatio()
 
     return (
-    	<div>
-    		<h3>Choose league:</h3>
+    	<div className="currency">
+    		<p className="search-title">Choose league:</p>
     		<form value={this.state.league} onChange={this.changeLeague.bind(this)}>
-    			<select>
+    			<select className="combo-boxes">
                     <optgroup label="Current">
     				<option value="Standard">Standard</option>
     				<option value="Hardcore">Hardcore</option>
@@ -51,10 +51,10 @@ class Currency extends React.Component {
                     </optgroup>
     			</select>
     		</form>
-    		<h3>Choose your currency:</h3>
+    		<p className="search-title">Choose your currency:</p>
     		<form>
     			For 1: 
-    				<select onChange={this.offerCurrency.bind(this)}>
+    				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">
     					<option value="ChaosOrb">Chaos Orb</option>
@@ -85,7 +85,7 @@ class Currency extends React.Component {
                         </optgroup>
     				</select>
     			  : 
-    			 	<select onChange={this.receiveCurrency.bind(this)}>
+    			 	<select className="combo-boxes" onChange={this.receiveCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">
     			 		<option value="chaos_orb">Chaos Orb</option>
@@ -115,12 +115,11 @@ class Currency extends React.Component {
     					<option value="scrollof_wisdom">Scroll of Wisdom</option>
                         </optgroup>
     			 	</select>
-    			<input type="submit" value="Search"/>
     		</form>
-            <p>1 {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
-            <div>
+            <p id="currency-text">1 {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
+            {/*<div>
                 <AllCurrency currency={this.props.currency} league={this.state.league} />
-            </div>
+            </div>*/}
     	</div>
     	);
   }

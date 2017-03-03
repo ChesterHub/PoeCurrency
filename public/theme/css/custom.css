@@ -1,0 +1,75 @@
+#header-text {
+	color: #ccac00
+}
+#header-text > span {
+	color: #C0C0C0
+}
+#title {
+	margin-top: 4px;
+	font-size: 70px;
+	color: #ccac00;
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#title > span {
+	font-style: italic;
+	font-size: 70px;
+	color: #C0C0C0;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*#circle-button {
+	font-size: 200%;
+}*/
+
+p {
+	color: #C0C0C0
+}
+
+.currency {
+	margin-top: 80px;
+	color: #ccac00;
+}
+
+.search-title {
+
+	font-size: 230%;
+	color: #ccac00;
+
+}
+
+.combo-boxes {
+	-webkit-appearance: menulist-button;
+	background-color: black;
+	width: 30%;
+	text-align: center;
+	padding-left: 20px;
+}
+
+.table-section  {
+
+}
+
+#currency-table, th,td {
+	border: 1px solid gray;
+	table-layout: fixed;
+	overflow: hidden;
+	max-width: 20vh;
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+#currency-text {
+	margin-top: 50px
+}
+
+.table-headers {
+	padding: 10px;
+}
+
+.table-values {
+	margin: 2px;
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #C0C0C0;
+
+}

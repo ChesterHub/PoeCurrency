@@ -124,7 +124,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(intro-bg.jpg) no-repeat bottom center scroll;
+  background: url(scion.jpg) no-repeat top center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -136,7 +136,7 @@ a:focus {
   vertical-align: middle;
 }
 .intro .intro-body .brand-heading {
-  font-size: 40px;
+  font-size: 30px;
 }
 .intro .intro-body .intro-text {
   font-size: 18px;
@@ -154,14 +154,13 @@ a:focus {
   }
 }
 .btn-circle {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid white;
-  border-radius: 100% !important;
-  font-size: 40px;
-  color: white;
+  width: 60px;
+  height: 60px;
+  padding: 5px 32px;
+/*  border: 2px solid white;*/
+  border-radius: 30% !important;
+  font-size: 85px;
+  color: #ccac00;
   background: transparent;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
@@ -170,14 +169,14 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
   outline: none;
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
+  color: #8b0000;
+  background: rgba(255, 255, 255, 0.04);
 }
 .btn-circle i.animated {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
+  -webkit-animation-duration: 1.7s;
+  -moz-animation-duration: 1.7s;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;

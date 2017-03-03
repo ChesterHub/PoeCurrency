@@ -5,8 +5,8 @@
                 <button type="button" class="navbar-toggle hidden" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
+                <a class="navbar-brand page-scroll" id="header-text" href="#page-top">
+                    <i class="fa fa-money" aria-hidden="true"></i> <span class="light">PoE</span> Currency Exchange
                 </a>
             </div>
 
@@ -33,11 +33,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
-					<h1 class="brand-heading">Grayscale</h1>
-					<p class="intro-text">A free, responsive, one page Bootstrap theme.
-						<br>Created by Start Bootstrap.</p>
-						<a href="#about" class="btn btn-circle page-scroll">
-							<i class="fa fa-angle-double-down animated"></i>
+					<h1 class="brand-heading" id="title"><span>PoE</span> Currency</h1>
+					<p class="intro-text">True Market Values. Updated Daily.</p>
+						<a href="#about" class="btn-circle page-scroll">
+							<i class="fa fa-angle-double-down animated" id="circle-button"></i>
 						</a>
 					</div>
 				</div>
@@ -46,15 +45,13 @@
 	</header>
 
 	<!-- About Section -->
-	<section id="about" class="container content-section text-center">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<h2>About Grayscale</h2>
-				<p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-				<p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-				<p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-			</div>
-		</div>
+	<div id="about"></div>
+	<section class=" text-center">
+
+<!-- 			<div class="col-lg-8 col-lg-offset-2"> -->
+			<%= react_component 'Currency', currency: @currency %>
+<!-- 			</div> -->
+
 	</section>
 
 	<!-- Download Section -->
@@ -70,28 +67,6 @@
 		</div>
 	</section>
 
-	<!-- Contact Section -->
-	<section id="contact" class="container content-section text-center">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<h2>Contact Start Bootstrap</h2>
-				<p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-				<p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-				</p>
-				<ul class="list-inline banner-social-buttons">
-					<li>
-						<a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-					</li>
-					<li>
-						<a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-					</li>
-					<li>
-						<a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
 
 	<!-- Footer -->
 	<footer>
