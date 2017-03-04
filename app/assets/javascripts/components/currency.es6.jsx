@@ -38,12 +38,16 @@ class Currency extends React.Component {
     textReturn(){
         let value = this.valueRatio()
         if (value === "Not Enough Data"){
-            return (<p id="currency-text"> Insufficient data available in chosen league. </p>);
+            return (<p id="currency-text"> Insufficient data available in league to determine ratio. </p>);
         }
         else if (value ===  false) {
+        } 
+        else if (this.state.currency_offer === this.state.currency_receive) {
+            return (
+                <p id="currency-text">{ `With 1 ${this.state.currency_offer}, you get 1 ${this.state.currency_receive}...` }</p>);
         } else {
             return (
-                <p id="currency-text">{ `With 1 ${this.state.currency_offer}, you can buy ${value} ${this.state.currency_receive}(s).` }</p>);
+                <p id="currency-text">{ `With 1 ${this.state.currency_offer}, you can buy ${value} ${this.state.currency_receive}s.` }</p>);
         }
     }
 
@@ -69,7 +73,7 @@ class Currency extends React.Component {
                     </optgroup>
     			</select>
     		</form>
-    		<p>One : # </p>
+    		<p>Currency Ratio </p>
     		<form className="select-forms">
     				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
