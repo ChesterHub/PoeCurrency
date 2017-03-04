@@ -2,10 +2,22 @@ require File.expand_path('../../config/environment',  __FILE__)
 require 'open-uri'
 require 'nokogiri'
 
+# When Adding New Leagues:
+# 	Add new League name in league types.
+# 	Add previous leagues to old leagues.
+# 	Add League seed in seed.rb
+#  	In Rails Console, Create new leagues records to MySQL
 
 league_types = [
 	"Standard",
 	"Hardcore",
+	"Breach",
+	"Hardcore+Breach",
+	"Legacy",
+	"Hardcore+Legacy"
+]
+
+old_leagues = [
 	"Breach",
 	"Hardcore+Breach"
 ]
@@ -154,27 +166,31 @@ def create_records(record_array)
 	puts "#{record_array.length} records created. Note: Only unique records saved to DB"
 end
 
-def start_mining(league_array, currency_offering_array, currency_receiving_array)
+def start_mining(league_array, currency_offering_array, currency_receiving_array, old_leagues)
 
 	league_array.each_with_index do |league, ind|
-		timer = rand(2..20)
-		puts "Waiting #{timer} seconds..."
-		sleep(timer)
-		puts "Opening Url...."
-		parsed_info = parse_html(league)
-		records = organize_records(
-			ind,
-			generate_igns(parsed_info),
-			generate_currency(parsed_info),
-			currency_offering_array,
-			currency_receiving_array
-			)
-		create_records(records)
+		if old_leagues.include?(league)
+			puts "#{league} is an old league. Skipping..."
+		else
+			timer = rand(2..20)
+			puts "Waiting #{timer} seconds..."
+			sleep(timer)
+			puts "Opening Url...."
+			parsed_info = parse_html(league)
+			records = organize_records(
+				ind,
+				generate_igns(parsed_info),
+				generate_currency(parsed_info),
+				currency_offering_array,
+				currency_receiving_array
+				)
+			create_records(records)
+		end
 	end
 
 end
 
-start_mining(league_types, currency_offering, currency_receiving)
+start_mining(league_types, currency_offering, currency_receiving, old_leagues)
 
 
 
