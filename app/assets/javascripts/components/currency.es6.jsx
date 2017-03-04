@@ -37,7 +37,7 @@ class Currency extends React.Component {
     let value = this.valueRatio()
 
     return (
-    	<div className="currency">
+    	<div id="currency">
     		<p className="search-title">Choose league:</p>
     		<form value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select className="combo-boxes">

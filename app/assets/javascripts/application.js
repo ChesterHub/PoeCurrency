@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap.min
+//= require grayscale.js
 //= require turbolinks
 //= require react
 //= require react_ujs
