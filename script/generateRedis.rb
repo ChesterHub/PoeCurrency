@@ -1,17 +1,26 @@
 require File.expand_path('../../config/environment',  __FILE__)
 
+# When adding new leagues
+# 	Add new leagues to league_types
+#  	Add League and numbers to league_num_hash
+
 league_types = [
 	"Standard",
 	"Hardcore",
 	"Breach",
-	"Hardcore+Breach"
+	"Hardcore+Breach",
+	"Legacy",
+	"Hardcore+Legacy"
 ]
 
+# League_id hash
 league_num_hash = {
 	"Standard" => 1,
 	"Hardcore" => 2,
 	"Breach" => 3,
-	"Hardcore+Breach" => 4
+	"Hardcore+Breach" => 4,
+	"Legacy" => 5,
+	"Hardcore+Legacy" => 6
 }
 
 currency = [
@@ -111,10 +120,10 @@ def generate_orbs(currency_array, redis_hash)
 	return redis_hash
 end
 
-def generate_averages(currency_array, averages_array, league_num_hash, validate_hash, redish_hash)
+def generate_averages(currency_array, averages_array, league_num_hash, validate_hash, redis_hash)
 	main_currency = ""
 	league_num = ""
-	redish_hash.each do |league_key, league_value|
+	redis_hash.each do |league_key, league_value|
 		league_num = league_num_hash[league_key]
 		league_value.each do |currency_key, currency_value|
 
