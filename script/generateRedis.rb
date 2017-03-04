@@ -131,8 +131,9 @@ def generate_averages(currency_array, averages_array, league_num_hash, validate_
 
 			averages_array.each do |c|
 				if validate_hash[main_currency] != c
-					avg = main_currency.where(league_id: league_num).average(c).to_f.round(5)
-					currency_value[c.to_s] = avg
+					avg1 = main_currency.where(league_id: league_num).average(c).to_f.round(5)
+					avg2 = validate_hash.key(c).where(league_id: league_num).average(validate_hash[main_currency]).to_f.round(5)
+					currency_value[c.to_s] = ((avg1 + (1 / avg2)) / 2).round(5)
 				end
 			end
 		end
