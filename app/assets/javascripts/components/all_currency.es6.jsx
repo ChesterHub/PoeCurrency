@@ -13,8 +13,8 @@ class AllCurrency extends React.Component {
                     rows.push(" -1- ")
                     rowCounter++
                 } else {
-                    if(theOrb[ratio] === 0){
-                        rows.push("Not Enough Data")
+                    if(theOrb[ratio] === "Not Enough Data"){
+                        rows.push("Insufficient Data")
                     } else {
                         rows.push(theOrb[ratio])
                     }

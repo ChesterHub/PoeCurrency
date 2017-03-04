@@ -39,21 +39,27 @@ p {
 }
 
 .search-title {
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 230%;
-	color: #ccac00;
+	font-style: initial;
+	color: #C0C0C0;
 
 }
 
 .select-forms {
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 }
 
 .combo-boxes {
 	-webkit-appearance: menulist-button;
 	background-color: black;
-	width: 30%;
+	width: 250px;
 	text-align: center;
 	padding-left: 20px;
+	height: 30px;
+	font-size: 130%;
+	color: #ccac00;
+
 }
 
 .table-section  {
@@ -70,7 +76,14 @@ p {
 
 
 #currency-text {
-	margin-top: 50px
+	margin-top: 50px;
+	font-size: 170%;
+	font-style: italic;
+}
+
+#currency-text > span {
+	color: gold;
+	font-style: normal;
 }
 
 #currency-text2 {
