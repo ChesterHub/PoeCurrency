@@ -2,10 +2,9 @@ class Currency extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			visible: false,
-			league: "Standard",
-			currency_offer: "ChaosOrb",
-			currency_receive: "ExaltedOrb",
+			league: false,
+			currency_offer: false,
+			currency_receive: false
 		}
 	}
 
@@ -28,14 +27,20 @@ class Currency extends React.Component {
     }
 
     valueRatio(){
+        if (this.state.league === false || this.state.currency_offer === false || this.state.currency_receive === false) {
+            return false
+        } else {
         let ratio = this.props.currency[this.state.league][this.state.currency_offer][this.state.currency_receive]
         return ratio
+        }
     }
 
     textReturn(){
         let value = this.valueRatio()
         if (value === "Not Enough Data"){
             return (<p id="currency-text"> Insufficient data available in chosen league. </p>);
+        }
+        else if (value ===  false) {
         } else {
             return (
                 <p id="currency-text">{ `With 1 ${this.state.currency_offer}, you can buy ${value} ${this.state.currency_receive}(s).` }</p>);
@@ -48,9 +53,10 @@ class Currency extends React.Component {
 
     return (
     	<div id="currency">
-    		<p className="search-title">CHOOSE LEAGUE</p>
+    		<p className="search-title">LEAGUE</p>
     		<form className="select-forms" value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select className="combo-boxes">
+                    <option selected="true" disabled="disabled"> -- Choose League -- </option>
                     <optgroup label="Current">
     				<option value="Standard">Standard</option>
     				<option value="Hardcore">Hardcore</option>
@@ -63,9 +69,8 @@ class Currency extends React.Component {
                     </optgroup>
     			</select>
     		</form>
-    		<p className="search-title">SELECT CURRENCY</p>
+    		<p>One : # </p>
     		<form className="select-forms">
-    			1 : 
     				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">

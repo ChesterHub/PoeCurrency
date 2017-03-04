@@ -40,14 +40,14 @@ p {
 
 .search-title {
 	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 230%;
+	font-size: 200%;
 	font-style: initial;
 	color: #C0C0C0;
 
 }
 
 .select-forms {
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 }
 
 .combo-boxes {
@@ -57,7 +57,7 @@ p {
 	text-align: center;
 	padding-left: 20px;
 	height: 30px;
-	font-size: 130%;
+	font-size: 120%;
 	color: #ccac00;
 
 }
