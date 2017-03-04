@@ -39,11 +39,13 @@ class Currency extends React.Component {
     return (
     	<div id="currency">
     		<p className="search-title">Choose league:</p>
-    		<form value={this.state.league} onChange={this.changeLeague.bind(this)}>
+    		<form className="select-forms" value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select className="combo-boxes">
                     <optgroup label="Current">
     				<option value="Standard">Standard</option>
     				<option value="Hardcore">Hardcore</option>
+                    <option value="Legacy">Legacy</option>
+                    <option value="Hardcore+Legacy">Hardcore Legacy</option>
                     </optgroup>
                     <optgroup label="Old">
     				<option value="Breach">Breach</option>
@@ -52,8 +54,8 @@ class Currency extends React.Component {
     			</select>
     		</form>
     		<p className="search-title">Choose your currency:</p>
-    		<form>
-    			For 1: 
+    		<form className="select-forms">
+    			For One: 
     				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">
@@ -84,7 +86,7 @@ class Currency extends React.Component {
                         <option value="ScrollofWisdom">Scroll of Wisdom</option>
                         </optgroup>
     				</select>
-    			  : 
+    			 <i className="fa fa-hand-o-right" aria-hidden="true"></i>  :  <i className="fa fa-hand-o-right" aria-hidden="true"></i> 
     			 	<select className="combo-boxes" onChange={this.receiveCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">
@@ -116,7 +118,11 @@ class Currency extends React.Component {
                         </optgroup>
     			 	</select>
     		</form>
-            <p id="currency-text">1 {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
+            <div className="text-section">
+                <p id="currency-text">One {this.state.currency_offer}, on average, will net you {value} {this.state.currency_receive}(s).</p>
+                OR
+                <p id="currency-text-two">One {this.state.currency_receive} will net you {1 / value} {this.state.currency_offer}(s). </p>
+            </div>
             {/*<div>
                 <AllCurrency currency={this.props.currency} league={this.state.league} />
             </div>*/}

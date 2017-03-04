@@ -5,7 +5,5 @@ class CurrencyController < ApplicationController
   	@currency = JSON.parse($redis.get("currency"))
   end
 
-  def show
-  end
 
 end

@@ -34,14 +34,18 @@ p {
 
 
 #currency {
+	padding-top: 150px;
 	color: #ccac00;
 }
 
 .search-title {
-
 	font-size: 230%;
 	color: #ccac00;
 
+}
+
+.select-forms {
+	padding-bottom: 30px;
 }
 
 .combo-boxes {
@@ -67,6 +71,10 @@ p {
 
 #currency-text {
 	margin-top: 50px
+}
+
+#currency-text2 {
+	font-size: 70%;
 }
 
 .table-headers {
