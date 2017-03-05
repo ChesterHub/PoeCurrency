@@ -44,10 +44,24 @@ class Currency extends React.Component {
         } 
         else if (this.state.currency_offer === this.state.currency_receive) {
             return (
-                <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`1`}<span>{` ${this.state.currency_receive}` }</span>{`...`}</p>);
+                <div className="text-section">
+                <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`1`}<span>{` ${this.state.currency_receive}` }</span>{`...`}</p>
+                </div>
+                );
         } else {
             return (
+                <div className="text-section">
+                <div className ="image-ratios">
+                    <p>
+                     1  
+                     <img className="images" src={"currency/" + this.state.currency_offer + ".png"}/>
+                     <i className="fa fa-exchange" aria-hidden="true"></i>  
+                     <img className="images" src={"currency/" + this.state.currency_receive + ".png"}/>
+                        {value}
+                    </p>
+                </div>
                 <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`${value}`}<span>{` ${this.state.currency_receive}s` }</span>{`.`}</p>
+                </div>
                 );
         }
     }
@@ -92,7 +106,7 @@ class Currency extends React.Component {
     					<option value="OrbofFusing">Orb of Fusing</option>
     					<option value="OrbofRegret">Orb of Regret</option>
     					<option value="OrbofScouring">Orb of Scouring</option>
-    					<option value="OrbofTransmute">Orb of Transmutation</option>
+    					<option value="OrbofTransmutation">Orb of Transmutation</option>
     					<option value="RegalOrb">Regal Orb</option>
     					<option value="VaalOrb">Vaal Orb</option>
                         </optgroup>
@@ -127,7 +141,7 @@ class Currency extends React.Component {
                         <option value="OrbofFusing">Orb of Fusing</option>
                         <option value="OrbofRegret">Orb of Regret</option>
                         <option value="OrbofScouring">Orb of Scouring</option>
-                        <option value="OrbofTransmute">Orb of Transmutation</option>
+                        <option value="OrbofTransmutation">Orb of Transmutation</option>
                         <option value="RegalOrb">Regal Orb</option>
                         <option value="VaalOrb">Vaal Orb</option>
                         </optgroup>
@@ -142,10 +156,8 @@ class Currency extends React.Component {
                         </optgroup>
     			 	</select>
     		</form>
-            <div className="text-section">
                 {this.textReturn()}
                 {/*<p id="currency-text-two">One {this.state.currency_receive} will net you {parseFloat((1 / value).toFixed(5))} {this.state.currency_offer}(s). </p>*/}
-            </div>
             {/*<div>
                 <AllCurrency currency={this.props.currency} league={this.state.league} />
             </div>*/}

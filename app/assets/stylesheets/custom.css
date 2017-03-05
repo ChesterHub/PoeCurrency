@@ -70,6 +70,18 @@ p {
 
 }
 
+.image-ratios p {
+	font-size: 150%;
+	color: #c8c8c8;
+}
+
+.images {
+	height: 60px;
+	width: 60px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
 option {
     margin: 5px;
     background-color: black;
