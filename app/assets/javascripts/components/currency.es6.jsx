@@ -50,16 +50,14 @@ class Currency extends React.Component {
                 );
         } else {
             return (
-                <div className="text-section">
                 <div className ="image-ratios">
                     <p>
-                     1  
+                     <span id="one">1</span>  
                      <img className="images" src={"currency/" + this.state.currency_offer + ".png"}/>
-                     <i className="fa fa-exchange" aria-hidden="true"></i>  
+                     <i className="fa fa-exchange" aria-hidden="true"></i>
                      <img className="images" src={"currency/" + this.state.currency_receive + ".png"}/>
                         {value}
                     </p>
-                </div>
                 <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`${value}`}<span>{` ${this.state.currency_receive}s` }</span>{`.`}</p>
                 </div>
                 );
@@ -73,7 +71,7 @@ class Currency extends React.Component {
     return (
     	<div id="currency">
     		<p id="league-title">-LEAGUE-</p>
-    		<form className="select-forms" value={this.state.league} onChange={this.changeLeague.bind(this)}>
+    		<form className="select-forms-first" value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select className="combo-boxes">
                     <option selected="true" disabled="disabled"> -- Select League -- </option>
                     <optgroup label="Current">
@@ -89,7 +87,7 @@ class Currency extends React.Component {
     			</select>
     		</form>
     		<p id="ratio-title">-CURRENCY RATIO-</p>
-    		<form className="select-forms">
+    		<form className="select-forms-second">
     				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">
