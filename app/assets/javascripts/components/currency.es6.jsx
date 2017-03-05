@@ -44,10 +44,11 @@ class Currency extends React.Component {
         } 
         else if (this.state.currency_offer === this.state.currency_receive) {
             return (
-                <p id="currency-text">{ `With 1 ${this.state.currency_offer}, you get 1 ${this.state.currency_receive}...` }</p>);
+                <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`1`}<span>{` ${this.state.currency_receive}` }</span>{`...`}</p>);
         } else {
             return (
-                <p id="currency-text">{ `With 1 ${this.state.currency_offer}, you can buy ${value} ${this.state.currency_receive}s.` }</p>);
+                <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`${value}`}<span>{` ${this.state.currency_receive}s` }</span>{`.`}</p>
+                );
         }
     }
 
@@ -57,10 +58,10 @@ class Currency extends React.Component {
 
     return (
     	<div id="currency">
-    		<p className="search-title">LEAGUE</p>
+    		<p id="league-title">-LEAGUE-</p>
     		<form className="select-forms" value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select className="combo-boxes">
-                    <option selected="true" disabled="disabled"> -- Choose League -- </option>
+                    <option selected="true" disabled="disabled"> -- Select League -- </option>
                     <optgroup label="Current">
     				<option value="Standard">Standard</option>
     				<option value="Hardcore">Hardcore</option>
@@ -73,7 +74,7 @@ class Currency extends React.Component {
                     </optgroup>
     			</select>
     		</form>
-    		<p>Currency Ratio </p>
+    		<p id="ratio-title">-CURRENCY RATIO-</p>
     		<form className="select-forms">
     				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
@@ -105,7 +106,11 @@ class Currency extends React.Component {
                         <option value="ScrollofWisdom">Scroll of Wisdom</option>
                         </optgroup>
     				</select>
-    			 <i className="fa fa-hand-o-right" aria-hidden="true"></i>  :  <i className="fa fa-hand-o-right" aria-hidden="true"></i> 
+   
+                      <i className="icons fa fa-money money" aria-hidden="true"></i>
+                      <i className="icons fa fa-exchange" aria-hidden="true"></i>         
+                      <i className="icons fa fa-tags money" aria-hidden="true"></i>     
+
     			 	<select className="combo-boxes" onChange={this.receiveCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">
