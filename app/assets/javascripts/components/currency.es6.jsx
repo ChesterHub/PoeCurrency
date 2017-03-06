@@ -12,13 +12,13 @@ class Currency extends React.Component {
     // Get the components DOM node
     let elem = ReactDOM.findDOMNode(this);
     console.log(elem)
-    // Set the opacity of the element to 0
-    elem.style.opacity = 0;
-    // window.requestAnimationFrame(function() {
-        // Now set a transition on the opacity
-        elem.style.transition = "opacity 250ms";
-        // and set the opacity to 1
-        elem.style.opacity = 1;
+    // // Set the opacity of the element to 0
+    // elem.style.opacity = 0;
+    // // window.requestAnimationFrame(function() {
+    //     // Now set a transition on the opacity
+    //     elem.style.transition = "opacity 250ms";
+    //     // and set the opacity to 1
+    //     elem.style.opacity = 1;
     // });
     }
 
@@ -42,6 +42,7 @@ class Currency extends React.Component {
             return false
         } else {
         let ratio = this.props.currency[this.state.league][this.state.currency_offer][this.state.currency_receive]
+        // return String(parseFloat(ratio).toFixed(3))
         return ratio
         }
     }
@@ -55,13 +56,13 @@ class Currency extends React.Component {
         } 
         else if (this.state.currency_offer === this.state.currency_receive) {
             return (
-                <div className="image-ratios">
+                <div className="image-ratios fadeinfast">
                 <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`1`}<span>{` ${this.state.currency_receive}` }</span>{`...`}</p>
                 </div>
                 );
         } else {
             return (
-                <div className ="image-ratios">
+                <div className ="image-ratios fadeinfast">
                     <p>
                      <span id="one">1</span>  
                      <img className="images" src={"currency/" + this.state.currency_offer + ".png"}/>
@@ -81,8 +82,8 @@ class Currency extends React.Component {
 
     return (
     	<div id="currency">
-    		<p id="league-title">-LEAGUE-</p>
-    		<form className="select-forms-first" value={this.state.league} onChange={this.changeLeague.bind(this)}>
+    		<p id="league-title" className="fadeinfast">-LEAGUE-</p>
+    		<form className="select-forms-first fadeinfast" value={this.state.league} onChange={this.changeLeague.bind(this)}>
     			<select className="combo-boxes">
                     <option selected="true" disabled="disabled"> -- Select League -- </option>
                     <optgroup label="Current">
@@ -97,8 +98,8 @@ class Currency extends React.Component {
                     </optgroup>
     			</select>
     		</form>
-    		<p id="ratio-title">-CURRENCY RATIO-</p>
-    		<form className="select-forms-second">
+    		<p id="ratio-title" className="fadeinslow">-CURRENCY RATIO-</p>
+    		<form className="select-forms-second fadeinslow">
     				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>
                         <option selected="true" disabled="disabled"> -- Select Currency -- </option>
                         <optgroup label="Orbs">

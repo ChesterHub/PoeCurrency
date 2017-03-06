@@ -60,7 +60,7 @@ class AllCurrency extends React.Component {
                     </optgroup>
                 </select>
             </form>
-    		<table id="currency-table">
+    		<table id="currency-table" className="fadeinfast">
                 <colgroup></colgroup>
                 <colgroup></colgroup>
                 <colgroup></colgroup>

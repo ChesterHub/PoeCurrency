@@ -1,29 +1,3 @@
-.animation {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-}
-
-.animation-hover:hover {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 6s;
-  -moz-animation-duration: 6s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-}
-
-.hover { 
-	background-color: #af6025; 
-}
-
 #header-text {
 	color: #aa9e82
 }
@@ -226,16 +200,128 @@ option {
 
 #faq h2 {
 	color:#af6025;
-
+	font-style: italic;
 	text-align: center;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 }
 
-#faq {
+#faq h5 {
+	margin-bottom: 10px;
+	color:#aa9e82;
+}
+
+#faq p {
 	text-align: center;
+	font-size: 14px;
+	margin-bottom: 30px
 }
 
 .footer p {
 	font-weight: italic;
 	font-size: 90%;
+}
+
+.animation {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.animation-hover:hover {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 6s;
+  -moz-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.hover { 
+	background-color: #af6025; 
+}
+
+
+.fadeinfast {
+    animation: fadeinfast 2s;
+    -moz-animation: fadeinfast 2s; /* Firefox */
+    -webkit-animation: fadeinfast 2s; /* Safari and Chrome */
+    -o-animation: fadeinfast 2s; /* Opera */
+}
+@keyframes fadeinfast {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadeinfast { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadeinfast { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadeinfast { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeinslow {
+    animation: fadeinslow 4s;
+    -moz-animation: fadeinslow 4s; /* Firefox */
+    -webkit-animation: fadeinslow 4s; /* Safari and Chrome */
+    -o-animation: fadeinslow 4s; /* Opera */
+}
+@keyframes fadeinslow {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadeinslow { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadeinslow { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadeinslow { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
