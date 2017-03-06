@@ -27,9 +27,34 @@ $(function() {
     });
 });
 
+// function to scroll table combo box
+// $(function() {
+//     $('.combo-scroll').bind('click', function(event) {
+//         alert("yex");
+//         var $anchor = $(this);
+//         $('html, body').stop().animate({
+//             scrollTop: $($anchor.attr('href')).offset().top
+//         }, 800, 'easeInOutExpo');
+//         event.preventDefault();
+//     });
+// });
+
+$(document).delegate('td','mouseover mouseleave', function(e) {
+    if (e.type == 'mouseover') { 
+      $(this).parent().addClass("hover");
+      $("colgroup").eq($(this).index()).addClass("hover");
+  }
+  else {
+      $(this).parent().removeClass("hover");
+      $("colgroup").eq($(this).index()).removeClass("hover");
+  }
+});
+
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $(this).closest('.collapse').collapse('toggle');
 });
+
 
 

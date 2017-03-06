@@ -1,3 +1,29 @@
+.animation {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.animation-hover:hover {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -webkit-animation-duration: 6s;
+  -moz-animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.hover { 
+	background-color: #af6025; 
+}
+
 #header-text {
 	color: #aa9e82
 }
@@ -37,7 +63,7 @@ p {
 
 
 #currency {
-	padding-top: 75px;
+	padding-top: 100px;
 	color: #aa9e82;
 }
 
@@ -58,7 +84,7 @@ p {
 }
 
 .select-forms-second {
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 }
 
 .combo-boxes {
@@ -69,8 +95,9 @@ p {
 	margin-left: 20px;
 	margin-right: 20px;
 	height: 32px;
-	font-size: 140%;
+	font-size: 130%;
 	color: #aa9e82;
+	cursor: pointer;
 
 }
 
@@ -109,7 +136,7 @@ option {
 #currency-text {
 	margin-top: 50px;
 	font-size: 150%;
-	font-style: italic;
+	font-style: normal;
 }
 
 #currency-text > span {
@@ -120,13 +147,15 @@ option {
 
 .table-section  {
 
+	margin-top: 80px;
+
 }
 
 #currency-table, th,td {
 	border: 1px solid gray;
+	width: 100%;
 	table-layout: fixed;
 	overflow: hidden;
-	max-width: 20vh;
 	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -137,12 +166,76 @@ option {
 }
 
 .table-headers {
-	padding: 10px;
+	text-align: center;
+	font-size: 80%;
+	font-weight: normal;
+	padding: 3px;
+}
+
+.table-headers img {
+	height: 50%;
+	width: 60%;
+	padding: 3px;
+
+}
+
+.table-headers-column {
+	text-align: center;
+	font-size: 80%;
+	font-weight: normal;
+	padding: 3px;
+}
+
+#table-title-one {
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 230%;
+	font-style: initial;
+	color: #ffff77;
+}
+
+#table-title-two {	
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 170%;
+	font-style: initial;
+	color: #ffff77;
+}
+
+#combo-boxes-table {
+	-webkit-appearance: menulist-button;
+	background-color: black;
+	width: 270px;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 32px;
+	font-size: 140%;
+	color: #af6025;
+
+}
+.table-form {
+	padding-bottom: 30px
 }
 
 .table-values {
 	margin: 2px;
 	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #c8c8c8;
+	padding: 2px;
 
+}
+
+#faq h2 {
+	color:#af6025;
+
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+#faq {
+	text-align: center;
+}
+
+.footer p {
+	font-weight: italic;
+	font-size: 90%;
 }

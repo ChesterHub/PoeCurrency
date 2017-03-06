@@ -9,6 +9,17 @@ class Currency extends React.Component {
 	}
 
     componentDidMount(event){   
+    // Get the components DOM node
+    let elem = ReactDOM.findDOMNode(this);
+    console.log(elem)
+    // Set the opacity of the element to 0
+    elem.style.opacity = 0;
+    // window.requestAnimationFrame(function() {
+        // Now set a transition on the opacity
+        elem.style.transition = "opacity 250ms";
+        // and set the opacity to 1
+        elem.style.opacity = 1;
+    // });
     }
 
 	offerCurrency(event){
@@ -44,7 +55,7 @@ class Currency extends React.Component {
         } 
         else if (this.state.currency_offer === this.state.currency_receive) {
             return (
-                <div className="text-section">
+                <div className="image-ratios">
                 <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`1`}<span>{` ${this.state.currency_receive}` }</span>{`...`}</p>
                 </div>
                 );
@@ -120,7 +131,7 @@ class Currency extends React.Component {
     				</select>
    
                       <i className="icons fa fa-money money" aria-hidden="true"></i>
-                      <i className="icons fa fa-exchange" aria-hidden="true"></i>         
+                      <i className="icons fa fa-angle-double-right" aria-hidden="true"></i>         
                       <i className="icons fa fa-tags money" aria-hidden="true"></i>     
 
     			 	<select className="combo-boxes" onChange={this.receiveCurrency.bind(this)}>
