@@ -17,8 +17,16 @@ class AllCurrency extends React.Component {
         theOrb = this.props.currency[this.state.league][orb]
         for (let ratio in theOrb){
             if (theOrb.hasOwnProperty(ratio)) {
-                if (rowCounter === matchingInd){
+                if (String(ratio) === "EternalOrb"){
+                    // Do nothing to skip Eternal Orb
+                    
+                } else if (rowCounter === matchingInd){
                     rows.push(" 1 ")
+                    if(theOrb[ratio] === "Not Enough Data"){
+                        rows.push("ND")
+                    } else {
+                        rows.push(theOrb[ratio].toFixed(3))
+                    }
                     rowCounter++
                 } else {
                     if(theOrb[ratio] === "Not Enough Data"){
@@ -28,7 +36,6 @@ class AllCurrency extends React.Component {
                     }
                     rowCounter++
                 }
-
             }
         }
         return rows
@@ -84,6 +91,7 @@ class AllCurrency extends React.Component {
                 <colgroup></colgroup>
                 <colgroup></colgroup>
                 <colgroup></colgroup>
+                <colgroup></colgroup>
             <tbody>
     		<tr>
     			<th className="table-headers"><i className="money fa fa-money" aria-hidden="true"></i></th>
@@ -112,96 +120,96 @@ class AllCurrency extends React.Component {
                 <th className="table-headers"><img src={"currency/VaalOrb.png"}/></th>
             </tr>
     		<tr>
-                <th className="table-headers-column">Armourer's</th>
-                {this.addTD("ArmourerScrap", 0).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/ArmourerScrap.png"}/></th>
+                {this.addTD("ArmourerScrap", 0).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
     		<tr>
-    			<th className="table-headers-column">Whetstone</th>
-    			{this.addTD("BlacksmithWhetstone", 1).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+    			<th className="table-headers-column"><img src={"currency/BlacksmithWhetstone.png"}/></th>
+    			{this.addTD("BlacksmithWhetstone", 1).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
     		</tr>
             <tr>
-                <th className="table-headers-column">Blessed</th>
-                {this.addTD("BlessedOrb", 2).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/BlessedOrb.png"}/></th>
+                {this.addTD("BlessedOrb", 2).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
     		<tr>
-    			<th className="table-headers-column">Cart's Chisel</th>
-    			{this.addTD("CartographerChisel", 3).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+    			<th className="table-headers-column"><img src={"currency/CartographerChisel.png"}/></th>
+    			{this.addTD("CartographerChisel", 3).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
     		</tr>
             <tr>
-                <th className="table-headers-column">Chaos</th>
-                {this.addTD("ChaosOrb", 4).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/ChaosOrb.png"}/></th>
+                {this.addTD("ChaosOrb", 4).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Chromatic</th>
-                {this.addTD("ChromaticOrb", 5).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/ChromaticOrb.png"}/></th>
+                {this.addTD("ChromaticOrb", 5).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Divine</th>
-                {this.addTD("DivineOrb", 6).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/DivineOrb.png"}/></th>
+                {this.addTD("DivineOrb", 6).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Exalted</th>
-                {this.addTD("ExaltedOrb", 7).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/ExaltedOrb.png"}/></th>
+                {this.addTD("ExaltedOrb", 7).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Gem Prism</th>
-                {this.addTD("GemcutterPrism", 8).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/GemcutterPrism.png"}/></th>
+                {this.addTD("GemcutterPrism", 8).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
     		<tr>
-    			<th className="table-headers-column">Glass Bauble</th>
-    			{this.addTD("GlassblowerBubble", 9).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+    			<th className="table-headers-column"><img src={"currency/GlassblowerBubble.png"}/></th>
+    			{this.addTD("GlassblowerBubble", 9).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
     		</tr>
             <tr>
-                <th className="table-headers-column">Jeweller's</th>
-                {this.addTD("JewellerOrb", 10).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/JewellerOrb.png"}/></th>
+                {this.addTD("JewellerOrb", 10).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Alchemy</th>
-                {this.addTD("OrbofAlchemy", 11).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofAlchemy.png"}/></th>
+                {this.addTD("OrbofAlchemy", 11).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Alteration</th>
-                {this.addTD("OrbofAlteration", 12).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofAlteration.png"}/></th>
+                {this.addTD("OrbofAlteration", 12).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Augmentation</th>
-                {this.addTD("OrbofAugmentation", 13).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofAugmentation.png"}/></th>
+                {this.addTD("OrbofAugmentation", 13).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Chance</th>
-                {this.addTD("OrbofChance", 14).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofChance.png"}/></th>
+                {this.addTD("OrbofChance", 14).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Fusing</th>
-                {this.addTD("OrbofFusing", 15).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofFusing.png"}/></th>
+                {this.addTD("OrbofFusing", 15).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Regret</th>
-                {this.addTD("OrbofRegret", 16).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofRegret.png"}/></th>
+                {this.addTD("OrbofRegret", 16).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Scouring</th>
-                {this.addTD("OrbofScouring", 17).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofScouring.png"}/></th>
+                {this.addTD("OrbofScouring", 17).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             <tr>
-                <th className="table-headers-column">Transmutation</th>
-                {this.addTD("OrbofTransmutation", 18).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/OrbofTransmutation.png"}/></th>
+                {this.addTD("OrbofTransmutation", 18).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
     		<tr>
-    			<th className="table-headers-column">Portal Scroll</th>
-    			{this.addTD("PortalScroll", 19).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+    			<th className="table-headers-column"><img src={"currency/PortalScroll.png"}/></th>
+    			{this.addTD("PortalScroll", 19).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
     		</tr>
             <tr>
-                <th className="table-headers-column">Regal</th>
-                {this.addTD("RegalOrb", 20).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/RegalOrb.png"}/></th>
+                {this.addTD("RegalOrb", 20).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
     		<tr>
-    			<th className="table-headers-column">Wisdom</th>
-    			{this.addTD("ScrollofWisdom", 21).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+    			<th className="table-headers-column"><img src={"currency/ScrollofWisdom.png"}/></th>
+    			{this.addTD("ScrollofWisdom", 21).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
     		</tr>
             <tr>
-                <th className="table-headers-column">Vaal</th>
-                {this.addTD("VaalOrb", 22).map((ratio, index) => <td className="table-values animation-hover" key={index}>{ratio}</td>)}
+                <th className="table-headers-column"><img src={"currency/VaalOrb.png"}/></th>
+                {this.addTD("VaalOrb", 22).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
             </tr>
             </tbody>
     		</table>

@@ -122,11 +122,13 @@ option {
 .table-section  {
 
 	margin-top: 80px;
+	padding-left: 30px;
+	padding-right: 30px
 
 }
 
 #currency-table, th,td {
-	border: 1px solid gray;
+	border: 2px solid #c8c8c8;
 	width: 100%;
 	table-layout: fixed;
 	overflow: hidden;
@@ -141,14 +143,14 @@ option {
 
 .table-headers {
 	text-align: center;
-	font-size: 80%;
+	font-size: 100%;
 	font-weight: normal;
 	padding: 3px;
 }
 
 .table-headers img {
-	height: 50%;
-	width: 60%;
+	height: 60%;
+	width: 70%;
 	padding: 3px;
 
 }
@@ -156,8 +158,16 @@ option {
 .table-headers-column {
 	text-align: center;
 	font-size: 80%;
-	font-weight: normal;
+	color: #aa9e82;
+	font-weight: bold;
 	padding: 3px;
+}
+
+.table-headers-column img {
+	height: 60%;
+	width: 70%;
+	padding: 3px;
+	text-align: center;
 }
 
 #table-title-one {
@@ -191,11 +201,23 @@ option {
 }
 
 .table-values {
-	margin: 2px;
+/*	margin: 4px;*/
 	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #c8c8c8;
-	padding: 2px;
+	font-size: 100%;
+	color: #aa9e82;
+	padding: 15px;
 
+}
+
+/*.table-values:hover {
+	background-color: #2f4f4f;
+	color: #af6025;
+}*/
+
+.table-values span {
+	color: black;
+	font-size: 105%;
+	font-style: italic;
 }
 
 #faq h2 {
@@ -207,7 +229,7 @@ option {
 
 #faq h5 {
 	margin-bottom: 10px;
-	color:#aa9e82;
+	color: #aa9e82;
 }
 
 #faq p {
@@ -233,18 +255,69 @@ option {
 }
 
 .animation-hover:hover {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 6s;
-  -moz-animation-duration: 6s;
-  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: popup;
+  -moz-animation-name: popup;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+/*  -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;*/
 }
 
 .hover { 
-	background-color: #af6025; 
+	background-color: #1c2f2f; 
+}
+
+.hover th {
+  -webkit-animation-name: popup;
+  -moz-animation-name: popup;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.hover.table-headers {
+-webkit-animation-name: popup;
+  -moz-animation-name: popup;
+  -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes popup {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #1c2f2f;
+    color: #aa9e82;
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    background-color: #2f4f4f;
+    color: #af6025;
+  }
+
+}
+@-moz-keyframes popup {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+	background-color: #1c2f2f;
+	color: #aa9e82;
+  }
+  100% {
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    background-color: #2f4f4f;
+    color: #af6025;
+  }
+
 }
 
 
@@ -257,71 +330,87 @@ option {
 @keyframes fadeinfast {
     from {
         opacity:0;
+        transform: translateY(10px);
     }
     to {
-        opacity:1;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 @-moz-keyframes fadeinfast { /* Firefox */
     from {
         opacity:0;
+        transform: translateY(10px);
     }
     to {
-        opacity:1;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 @-webkit-keyframes fadeinfast { /* Safari and Chrome */
     from {
         opacity:0;
+        transform: translateY(10px);
     }
     to {
-        opacity:1;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 @-o-keyframes fadeinfast { /* Opera */
     from {
         opacity:0;
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
+        transform: translateY(0px);
     }
 }
 
 .fadeinslow {
-    animation: fadeinslow 4s;
-    -moz-animation: fadeinslow 4s; /* Firefox */
-    -webkit-animation: fadeinslow 4s; /* Safari and Chrome */
-    -o-animation: fadeinslow 4s; /* Opera */
+    animation: fadeinslow 3s;
+    -moz-animation: fadeinslow 3s; /* Firefox */
+    -webkit-animation: fadeinslow 3s; /* Safari and Chrome */
+    -o-animation: fadeinslow 3s; /* Opera */
 }
 @keyframes fadeinslow {
     from {
         opacity:0;
+        transform: translateY(20px);
     }
     to {
-        opacity:1;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 @-moz-keyframes fadeinslow { /* Firefox */
     from {
         opacity:0;
+        transform: translateY(20px);
     }
     to {
-        opacity:1;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 @-webkit-keyframes fadeinslow { /* Safari and Chrome */
     from {
         opacity:0;
+        transform: translateY(20px);
     }
     to {
-        opacity:1;
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 @-o-keyframes fadeinslow { /* Opera */
     from {
         opacity:0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0px);
     }
 }
