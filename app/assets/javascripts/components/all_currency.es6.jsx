@@ -92,33 +92,35 @@ class AllCurrency extends React.Component {
                 <colgroup></colgroup>
                 <colgroup></colgroup>
                 <colgroup></colgroup>
+                <thead>
+    		  <tr>
+    			    <th className="table-headers"><i className="money fa fa-money" aria-hidden="true"></i></th>
+    			    <th className="table-headers"><img src={"currency/ArmourerScrap.png"}/></th>
+    			    <th className="table-headers"><img src={"currency/BlacksmithWhetstone.png"}/></th>
+                    <th className="table-headers"><img src={"currency/BlessedOrb.png"}/></th>
+    			    <th className="table-headers"><img src={"currency/CartographerChisel.png"}/></th>
+                    <th className="table-headers"><img src={"currency/ChaosOrb.png"}/></th>
+                    <th className="table-headers"><img src={"currency/ChromaticOrb.png"}/></th>
+                    <th className="table-headers"><img src={"currency/DivineOrb.png"}/></th>
+                    <th className="table-headers"><img src={"currency/ExaltedOrb.png"}/></th>
+    			    <th className="table-headers"><img src={"currency/GemcutterPrism.png"}/></th>
+    			    <th className="table-headers"><img src={"currency/GlassblowerBubble.png"}/></th>
+                    <th className="table-headers"><img src={"currency/JewellerOrb.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofAlchemy.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofAlteration.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofAugmentation.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofChance.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofFusing.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofRegret.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofScouring.png"}/></th>
+                    <th className="table-headers"><img src={"currency/OrbofTransmutation.png"}/></th>
+                    <th className="table-headers"><img src={"currency/PortalScroll.png"}/></th>
+                    <th className="table-headers"><img src={"currency/RegalOrb.png"}/></th>
+                    <th className="table-headers"><img src={"currency/ScrollofWisdom.png"}/></th>
+                    <th className="table-headers"><img src={"currency/VaalOrb.png"}/></th>
+                </tr>
+            </thead>
             <tbody>
-    		<tr>
-    			<th className="table-headers"><i className="money fa fa-money" aria-hidden="true"></i></th>
-    			<th className="table-headers"><img src={"currency/ArmourerScrap.png"}/></th>
-    			<th className="table-headers"><img src={"currency/BlacksmithWhetstone.png"}/></th>
-                <th className="table-headers"><img src={"currency/BlessedOrb.png"}/></th>
-    			<th className="table-headers"><img src={"currency/CartographerChisel.png"}/></th>
-                <th className="table-headers"><img src={"currency/ChaosOrb.png"}/></th>
-                <th className="table-headers"><img src={"currency/ChromaticOrb.png"}/></th>
-                <th className="table-headers"><img src={"currency/DivineOrb.png"}/></th>
-                <th className="table-headers"><img src={"currency/ExaltedOrb.png"}/></th>
-    			<th className="table-headers"><img src={"currency/GemcutterPrism.png"}/></th>
-    			<th className="table-headers"><img src={"currency/GlassblowerBubble.png"}/></th>
-                <th className="table-headers"><img src={"currency/JewellerOrb.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofAlchemy.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofAlteration.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofAugmentation.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofChance.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofFusing.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofRegret.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofScouring.png"}/></th>
-                <th className="table-headers"><img src={"currency/OrbofTransmutation.png"}/></th>
-                <th className="table-headers"><img src={"currency/PortalScroll.png"}/></th>
-                <th className="table-headers"><img src={"currency/RegalOrb.png"}/></th>
-                <th className="table-headers"><img src={"currency/ScrollofWisdom.png"}/></th>
-                <th className="table-headers"><img src={"currency/VaalOrb.png"}/></th>
-            </tr>
     		<tr>
                 <th className="table-headers-column"><img src={"currency/ArmourerScrap.png"}/></th>
                 {this.addTD("ArmourerScrap", 0).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}

@@ -146,6 +146,7 @@ option {
 	font-size: 100%;
 	font-weight: normal;
 	padding: 3px;
+	background-color: #A59263;
 }
 
 .table-headers img {
@@ -161,6 +162,7 @@ option {
 	color: #aa9e82;
 	font-weight: bold;
 	padding: 3px;
+	background-color: #A59263;
 }
 
 .table-headers-column img {
@@ -280,8 +282,8 @@ option {
   -webkit-animation-fill-mode: forwards;
 }
 
-.hover.table-headers {
--webkit-animation-name: popup;
+.table-headers.hover {
+  -webkit-animation-name: popup;
   -moz-animation-name: popup;
   -webkit-animation-duration: .5s;
   -moz-animation-duration: .5s;
