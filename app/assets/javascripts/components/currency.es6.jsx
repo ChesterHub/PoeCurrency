@@ -11,7 +11,6 @@ class Currency extends React.Component {
     componentDidMount(event){   
     // Get the components DOM node
     let elem = ReactDOM.findDOMNode(this);
-    console.log(elem)
     // // Set the opacity of the element to 0
     // elem.style.opacity = 0;
     // // window.requestAnimationFrame(function() {
@@ -167,7 +166,6 @@ class Currency extends React.Component {
     			 	</select>
     		</form>
                 {this.textReturn()}
-                {/*<p id="currency-text-two">One {this.state.currency_receive} will net you {parseFloat((1 / value).toFixed(5))} {this.state.currency_offer}(s). </p>*/}
             {/*<div>
                 <AllCurrency currency={this.props.currency} league={this.state.league} />
             </div>*/}

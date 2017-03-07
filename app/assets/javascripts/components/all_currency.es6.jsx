@@ -49,8 +49,8 @@ class AllCurrency extends React.Component {
             <p>
                 Row<i className="icons fa fa-money money" aria-hidden="true"></i>
                 <i className="icons fa fa-angle-double-right" aria-hidden="true"></i>
-                <i className="icons fa fa-tags money" aria-hidden="true"></i>Column</p>
-                <p>ND = Not enough data in chosen league</p>  
+                <i className="icons fa fa-tags money" aria-hidden="true"></i>Column<br/>
+                ND <span>=</span> Not enough data in chosen league</p>  
             <p id="table-title-two">-LEAGUE-</p>
             <form className="table-form" value={this.state.league} onChange={this.changeLeague.bind(this)}>
                 <select id="combo-boxes-table">
@@ -67,7 +67,7 @@ class AllCurrency extends React.Component {
                     </optgroup>
                 </select>
             </form>
-    		<table id="currency-table" className="fadeinfast">
+    		<table className="currency-table fadeinfast">
                 <colgroup></colgroup>
                 <colgroup></colgroup>
                 <colgroup></colgroup>

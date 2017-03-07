@@ -37,7 +37,7 @@ p {
 
 
 #currency {
-	padding-top: 100px;
+	padding-top: 140px;
 	color: #aa9e82;
 }
 
@@ -46,15 +46,17 @@ p {
 	font-size: 230%;
 	font-style: initial;
 	color: #4169e1;
+	margin-bottom: 30px;
 
 }
 
 #ratio-title {
 	color: #4169e1;
+	margin-bottom: 10px;
 }
 
 .select-forms-first {
-	padding-bottom: 50px;
+	padding-bottom: 65px;
 }
 
 .select-forms-second {
@@ -119,27 +121,49 @@ option {
 	font-size: 120%;
 }
 
-.table-section  {
-
-	margin-top: 80px;
-	padding-left: 30px;
-	padding-right: 30px
-
+#table-title-one {
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 230%;
+	font-style: initial;
+	color: #ffff77;
+	margin-bottom: 30px;
 }
 
-#currency-table, th,td {
-	border: 2px solid #c8c8c8;
+#table-title-two {	
+	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 170%;
+	font-style: initial;
+	color: #ffff77;
+	margin-bottom: 10px;
+}
+
+.table-section  {
+	margin-top: 80px;
+/*	padding-left: 10px;*/
+	padding-right: 30px
+}
+
+.table-section p {
+	font-size: 18px;
+	margin-bottom: 50px;
+}
+
+.table-section p span {
+	color: #aa9e82;
+}
+
+.currency-table, th,td {
+	border: 1px #c8c8c8;
+	border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
 	width: 100%;
 	table-layout: fixed;
-	overflow: hidden;
+/*	overflow: hidden;*/
 	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-
-#currency-text2 {
-	font-size: 70%;
-}
 
 .table-headers {
 	text-align: center;
@@ -147,6 +171,10 @@ option {
 	font-weight: normal;
 	padding: 3px;
 	background-color: #121f1f;
+/*	border-right-style: solid;*/
+/*	border-left-style: solid;*/
+	border-top-style: solid;
+	border-bottom-style: solid;
 }
 
 .table-headers img {
@@ -163,6 +191,10 @@ option {
 	font-weight: bold;
 	padding: 3px;
 	background-color: #121f1f;
+/*	border-top-style: solid;
+    border-bottom-style: solid;*/
+	border-right-style: solid;
+/*	border-left-style: solid;*/
 }
 
 .table-headers-column img {
@@ -172,19 +204,6 @@ option {
 	text-align: center;
 }
 
-#table-title-one {
-	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 230%;
-	font-style: initial;
-	color: #ffff77;
-}
-
-#table-title-two {	
-	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 170%;
-	font-style: initial;
-	color: #ffff77;
-}
 
 #combo-boxes-table {
 	-webkit-appearance: menulist-button;
@@ -207,7 +226,8 @@ option {
 	font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 100%;
 	color: #aa9e82;
-	padding: 15px;
+	padding-left: 5px;
+	padding-right: 15px;
 
 }
 
@@ -299,9 +319,9 @@ option {
     color: #aa9e82;
   }
   100% {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
-    background-color: #2f4f4f;
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    background-color: #aa9e82;
     color: #af6025;
   }
 
@@ -314,9 +334,9 @@ option {
 	color: #aa9e82;
   }
   100% {
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-    background-color: #2f4f4f;
+    -moz-transform: scale(1.12);
+    transform: scale(1.12);
+    background-color: #aa9e82;
     color: #af6025;
   }
 

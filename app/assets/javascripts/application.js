@@ -14,6 +14,7 @@
 //= require tether
 //= require jquery_ujs
 //= require jquery.sticky.js
+//= require jquery.floatThead.min.js
 //= require bootstrap-sprockets
 //= require bootstrap.min
 //= require grayscale.js
