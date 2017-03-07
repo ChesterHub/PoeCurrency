@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/sinatra/sinatra.git
-  revision: 32f416c7b8e5131247dadee4ac848ac42c43c761
+  revision: ccd8640d892d7c70234c808136c6f57a3657e753
   specs:
-    rack-protection (2.0.0.beta2)
+    rack-protection (2.0.0.rc1)
       rack
-    sinatra (2.0.0.beta2)
-      mustermann (= 1.0.0.beta2)
+    sinatra (2.0.0.rc1)
+      mustermann (= 1.0.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.0.beta2)
+      rack-protection (= 2.0.0.rc1)
       tilt (~> 2.0)
 
 GEM
@@ -100,7 +100,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    mustermann (1.0.0.beta2)
+    mustermann (1.0.0)
     mysql2 (0.4.5)
     mysql2 (0.4.5-x64-mingw32)
     nio4r (2.0.0)
@@ -197,7 +197,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2017.1)
       tzinfo (>= 1.0.0)
-    uglifier (3.1.3)
+    uglifier (3.1.4)
       execjs (>= 0.3.0, < 3)
     web-console (3.4.0)
       actionview (>= 5.0)

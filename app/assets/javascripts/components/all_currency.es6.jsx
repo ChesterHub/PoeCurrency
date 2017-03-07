@@ -19,7 +19,7 @@ class AllCurrency extends React.Component {
             if (theOrb.hasOwnProperty(ratio)) {
                 if (String(ratio) === "EternalOrb"){
                     // Do nothing to skip Eternal Orb
-                    
+
                 } else if (rowCounter === matchingInd){
                     rows.push(" 1 ")
                     if(theOrb[ratio] === "Not Enough Data"){
@@ -210,6 +210,7 @@ class AllCurrency extends React.Component {
             <tr>
                 <th className="table-headers-column"><img src={"currency/VaalOrb.png"}/></th>
                 {this.addTD("VaalOrb", 22).map((ratio, index) => <td className="table-values animation-hover" key={index}><span>1:</span>{ratio}</td>)}
+                <td className="table-values animation-hover"><span>1:</span> 1</td>
             </tr>
             </tbody>
     		</table>

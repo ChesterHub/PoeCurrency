@@ -50,7 +50,7 @@ class Currency extends React.Component {
     textReturn(){
         let value = this.valueRatio()
         if (value === "Not Enough Data"){
-            return (<p id="currency-text"> Insufficient data available in league to determine ratio. </p>);
+            return (<p id="currency-text" className="fadeinfast"> Insufficient data available in league to determine ratio. </p>);
         }
         else if (value ===  false) {
         } 
