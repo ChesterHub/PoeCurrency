@@ -18,7 +18,7 @@
 !/tmp/.keep
 
 # Ignore Redis Dump
-dump.rdb
+/dump.rdb
 
 # Ignore Byebug command history file.
 .byebug_history
