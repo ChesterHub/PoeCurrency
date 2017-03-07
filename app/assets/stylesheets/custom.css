@@ -152,6 +152,13 @@ option {
 	color: #aa9e82;
 }
 
+/*.currency-table {
+	background: url(map.jpg) no-repeat top center scroll;
+	background-blend-mode: lighten;
+	background: rgba(255,255,255, 0.3);
+}*/
+
+
 .currency-table, th,td {
 	border: 1px #c8c8c8;
 	border-top-style: none;
