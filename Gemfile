@@ -64,6 +64,9 @@ gem 'react-rails'
 gem 'sidekiq'
 gem 'sinatra', github: 'sinatra/sinatra'
 
+gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
+
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rails'
