@@ -19,7 +19,7 @@
 
 # Ignore Redis Dump
 dump.rdb
-database.yml
+config/database.yml
 
 # Ignore Byebug command history file.
 .byebug_history
