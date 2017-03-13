@@ -4,13 +4,14 @@ class Currency extends React.Component {
 		this.state = {
 			league: false,
 			currency_offer: false,
-			currency_receive: false
+			currency_receive: false,
+            filter: 0
 		}
 	}
 
     componentDidMount(event){   
     // Get the components DOM node
-    let elem = ReactDOM.findDOMNode(this);
+    // let elem = ReactDOM.findDOMNode(this);
     // // Set the opacity of the element to 0
     // elem.style.opacity = 0;
     // // window.requestAnimationFrame(function() {
@@ -36,11 +37,18 @@ class Currency extends React.Component {
         this.setState({league: change})
     }
 
+    changeFilter(event){
+        const change = event.target.value;
+        this.setState({filter: change})
+    }
+
     valueRatio(){
         if (this.state.league === false || this.state.currency_offer === false || this.state.currency_receive === false) {
             return false
+        } else if (this.state.currency_offer === this.state.currency_receive) {
+            return "duplicate"
         } else {
-        let ratio = this.props.currency[this.state.league][this.state.currency_offer][this.state.currency_receive]
+        let ratio = this.props.currency[this.state.league][this.state.currency_offer][this.state.currency_receive][this.state.filter]
         // return String(parseFloat(ratio).toFixed(3))
         return ratio
         }
@@ -53,7 +61,7 @@ class Currency extends React.Component {
         }
         else if (value ===  false) {
         } 
-        else if (this.state.currency_offer === this.state.currency_receive) {
+        else if (value === "duplicate") {
             return (
                 <div className="image-ratios fadeinfast">
                 <p id="currency-text">{ `With 1 `}<span>{`${this.state.currency_offer}`}</span>{`, you can purchase`} {`1`}<span>{` ${this.state.currency_receive}` }</span>{`...`}</p>
@@ -62,7 +70,7 @@ class Currency extends React.Component {
         } else {
             return (
                 <div className ="image-ratios fadeinfast">
-                    <p>
+                    <p id="image-text">
                      <span id="one">1</span>  
                      <img className="images" src={"currency/" + this.state.currency_offer + ".png"}/>
                      <i className="fa fa-exchange" aria-hidden="true"></i>
@@ -97,6 +105,18 @@ class Currency extends React.Component {
                     </optgroup>
     			</select>
     		</form>
+
+            <p id="filter-title" className="fadeinslow">-FILTER-</p>
+            <form className="select-forms-third fadeinslow">
+                <select className="combo-boxes" onChange={this.changeFilter.bind(this)}>
+                    <option selected="true" value="0" >All Time</option>
+                    <option value="1">One Day Ago</option>
+                    <option value="2">One Week Ago</option>
+                    <option value="3">One Month Ago</option>
+                </select>
+            </form>
+
+
     		<p id="ratio-title" className="fadeinslow">-CURRENCY RATIO-</p>
     		<form className="select-forms-second fadeinslow">
     				<select className="combo-boxes" onChange={this.offerCurrency.bind(this)}>

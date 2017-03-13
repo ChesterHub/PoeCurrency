@@ -2,7 +2,8 @@ class AllCurrency extends React.Component {
         constructor(props){
         super(props)
         this.state = {
-            league: "Standard"
+            league: "Standard",
+            filter: 0
         }
     }
 
@@ -22,17 +23,17 @@ class AllCurrency extends React.Component {
 
                 } else if (rowCounter === matchingInd){
                     rows.push(" 1 ")
-                    if(theOrb[ratio] === "Not Enough Data"){
+                    if(theOrb[ratio][this.state.filter] === "Not Enough Data"){
                         rows.push("ND")
                     } else {
-                        rows.push(theOrb[ratio].toFixed(3))
+                        rows.push(theOrb[ratio][this.state.filter].toFixed(3))
                     }
                     rowCounter++
                 } else {
-                    if(theOrb[ratio] === "Not Enough Data"){
+                    if(theOrb[ratio][this.state.filter] === "Not Enough Data"){
                         rows.push("ND")
                     } else {
-                        rows.push(theOrb[ratio].toFixed(3))
+                        rows.push(theOrb[ratio][this.state.filter].toFixed(3))
                     }
                     rowCounter++
                 }
@@ -40,6 +41,12 @@ class AllCurrency extends React.Component {
         }
         return rows
     }
+
+    changeFilter(event){
+        const change = event.target.value;
+        this.setState({filter: change})
+    }
+
 
   render () {
     return (
@@ -51,9 +58,18 @@ class AllCurrency extends React.Component {
                 <i className="icons fa fa-angle-double-right" aria-hidden="true"></i>
                 <i className="icons fa fa-tags money" aria-hidden="true"></i>Column<br/>
                 ND <span>=</span> Not enough data in chosen league</p>  
-            <p id="table-title-two">-LEAGUE-</p>
+            <p id="table-title-two" className="fadeinslow">-FILTER-</p>
+            <form className="select-forms-third fadeinslow">
+                <select className="combo-boxes-table" onChange={this.changeFilter.bind(this)}>
+                    <option selected="true" value="0" >All Time</option>
+                    <option value="1">One Day Ago</option>
+                    <option value="2">One Week Ago</option>
+                    <option value="3">One Month Ago</option>
+                </select>
+            </form>
+            <p id="table-title-two" className="fadeinslow">-LEAGUE-</p>
             <form className="table-form" value={this.state.league} onChange={this.changeLeague.bind(this)}>
-                <select id="combo-boxes-table">
+                <select className="combo-boxes-table fadeinslow">
                         <option disabled="disabled"> -- Select League -- </option>
                     <optgroup label="Current">
                         <option selected="true" value="Standard">Standard</option>
@@ -67,6 +83,8 @@ class AllCurrency extends React.Component {
                     </optgroup>
                 </select>
             </form>
+
+
     		<table className="currency-table fadeinfast">
                 <colgroup></colgroup>
                 <colgroup></colgroup>

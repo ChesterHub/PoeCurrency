@@ -77,9 +77,9 @@ currency_receiving = {
 }
 
 def parse_html(league)
-	url = "http://currency.poe.trade/search?league=#{league}&online=&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25"
+	url = "http://currency.poe.trade/search?league=#{league}&online=x&want=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25&have=1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20-21-22-23-25"
 
-	test_url = "http://currency.poe.trade/search?league=#{league}&online=&want=1-2-3-4-5&have=1-2-3-4-5"
+	test_url = "http://currency.poe.trade/search?league=#{league}&online=x&want=1-2-3-4-5&have=1-2-3-4-5"
 
 	puts "Mining in #{league} league...."
 	document = open(url)
