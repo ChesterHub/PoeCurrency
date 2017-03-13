@@ -131,18 +131,52 @@ def generate_averages(currency_array, averages_array, league_num_hash, validate_
 
 			averages_array.each do |c|
 				if validate_hash[main_currency] != c
-					avg2 = validate_hash.key(c).where(league_id: league_num).average(validate_hash[main_currency]).to_f.round(5)
-					if avg2 != 0
-						avg1 = main_currency.where(league_id: league_num).average(c).to_f.round(5)
-						currency_value[c.to_s] = ((avg1.to_r + (1 / avg2.to_r)) / 2).to_f.round(5)
-					else
-						currency_value[c.to_s] = "Not Enough Data"
-					end
+
+					currency_value[c.to_s] = create_averages(c, main_currency, league_num, validate_hash)
+					
 					currency_value[validate_hash.key(c).to_s] = currency_value.delete(c.to_s)
 				end
 			end
 		end
 	end
+
+end
+
+def create_averages(receive_currency, offer_currency, league_num, validate_hash)
+	# All Time averages
+	averages = []
+	avg2 = validate_hash.key(receive_currency).where(league_id: league_num).average(validate_hash[offer_currency]).to_f.round(5)
+	if avg2 != 0
+		avg1 = offer_currency.where(league_id: league_num).average(receive_currency).to_f.round(5)
+		averages << ((avg1.to_r + (1 / avg2.to_r)) / 2).to_f.round(5)
+	else
+		averages << "Not Enough Data"
+	end
+	# Day averages
+	avg2 = validate_hash.key(receive_currency).where(league_id: league_num).where(created_at: 48.hours.ago.utc..Time.now.utc).average(validate_hash[offer_currency]).to_f.round(5)
+	if avg2 != 0
+		avg1 = offer_currency.where(league_id: league_num).where(created_at: 48.hours.ago.utc..Time.now.utc).average(receive_currency).to_f.round(5)
+		averages << ((avg1.to_r + (1 / avg2.to_r)) / 2).to_f.round(5)
+	else
+		averages << "Not Enough Data"
+	end
+	# week averages
+	avg2 = validate_hash.key(receive_currency).where(league_id: league_num).where(created_at: 8.days.ago.utc..Time.now.utc).average(validate_hash[offer_currency]).to_f.round(5)
+	if avg2 != 0
+		avg1 = offer_currency.where(league_id: league_num).where(created_at: 8.days.ago.utc..Time.now.utc).average(receive_currency).to_f.round(5)
+		averages << ((avg1.to_r + (1 / avg2.to_r)) / 2).to_f.round(5)
+	else
+		averages << "Not Enough Data"
+	end
+	# month averages
+	avg2 = validate_hash.key(receive_currency).where(league_id: league_num).where(created_at: 31.days.ago.utc..Time.now.utc).average(validate_hash[offer_currency]).to_f.round(5)
+	if avg2 != 0
+		avg1 = offer_currency.where(league_id: league_num).where(created_at: 31.days.ago.utc..Time.now.utc).average(receive_currency).to_f.round(5)
+		averages << ((avg1.to_r + (1 / avg2.to_r)) / 2).to_f.round(5)
+	else
+		averages << "Not Enough Data"
+	end
+	return averages
 
 end
 
