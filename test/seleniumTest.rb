@@ -40,33 +40,32 @@ end
 
 # -------------------INTRO SECTION-------------------
 # Check for intro combo boxes
-if driver.find_element(:class_name, "select-forms-first").find_element(:class_name, "combo-boxes")
+begin
 	league = driver.find_element(:class_name, "select-forms-first").find_element(:class_name, "combo-boxes")
 	puts "Test4: League Combobox found.".green
 	test_pass += 1
-else
-	puts test_errors << "Test4: League Combobox not found.".red
+rescue Exception => e
+	puts test_errors << "Test4: League Combobox not found. #{e}".red
 	test_fail += 1
 end
 
-if driver.find_element(:class_name, "select-forms-third").find_element(:class_name, "combo-boxes")
+begin
 	filter = driver.find_element(:class_name, "select-forms-third").find_element(:class_name, "combo-boxes")
 	puts "Test5: Filter Combobox found.".green
 	test_pass += 1
-else
-	puts test_errors << "Test5: Filter Combobox not found.".red
+rescue Exception => e
+	puts test_errors << "Test5: Filter Combobox not found. #{e}".red
 	test_fail += 1
 end
 
-if driver.find_element(:class_name, "select-forms-second").find_elements(:class_name, "combo-boxes")
+begin
 	ratio = driver.find_element(:class_name, "select-forms-second").find_elements(:class_name, "combo-boxes")
 	puts "Test6: Ratio Comboboxes found.".green
 	test_pass += 1
-else
-	puts test_errors << "Test6: Ratio Comboboxes not found.".red
+rescue
+	puts test_errors << "Test6: Ratio Comboboxes not found. #{e}".red
 	test_fail += 1
 end
-
 
 # Test intro comboboxes
 if league && filter && ratio
@@ -112,31 +111,31 @@ end
 
 # -------------------TABLE SECTION-------------------
 # Check for table comboboxes
-if driver.find_element(:class_name, "select-forms-fourth").find_element(:class_name, "combo-boxes-table")
+begin
 	filter_table = driver.find_element(:class_name, "select-forms-fourth").find_element(:class_name, "combo-boxes-table")
 	puts "Test8: Filter Table Combobox found.".green
 	test_pass += 1
-else
-	puts test_errors << "Test8: Filter Table Combobox not found.".red
+rescue Exception => e
+	puts test_errors << "Test8: Filter Table Combobox not found. #{e}".red
 	test_fail += 1
 end
 
-if driver.find_element(:class_name, "table-form").find_element(:class_name, "combo-boxes-table")
+begin
 	league_table = driver.find_element(:class_name, "table-form").find_element(:class_name, "combo-boxes-table")
 	puts "Test9: League Table Combobox found.".green
 	test_pass += 1
-else
-	puts test_errors << "Test9: League Table Combobox not found.".red
+rescue Exception => e
+	puts test_errors << "Test9: League Table Combobox not found. #{e}".red
 	test_fail += 1
 end
 
 # check for table
-if driver.find_element(:class_name, "currency-table")
+begin
 	table = driver.find_element(:class_name, "currency-table")
 	puts "Test10: Table found.".green
 	test_pass += 1
-else
-	puts test_errors << "Test10: Table not found.".red
+rescue Exception => e
+	puts test_errors << "Test10: Table not found. #{e}".red
 	test_fail += 1
 end
 
@@ -174,12 +173,12 @@ else
 end
 
 # check for faq
-if driver.find_element(:id, "faq")
+begin
 	faq = driver.find_element(:id, "faq")
 	puts "Test12: FAQ found.".green
 	test_pass += 1
-else
-	puts test_errors << "Test12: FAQ not found.".red
+rescue Exception => e
+	puts test_errors << "Test12: FAQ not found. #{e}".red
 	test_fail += 1
 end
 
@@ -192,10 +191,12 @@ if test_errors.any?
 	puts "#{test_pass} tests passed.".green
 	puts "#{test_fail} tests failed.".red
 	puts "----errors:".yellow
-	test_errors.each { |e| puts e.yellow }
+	test_errors.each { |e| puts e.red }
 else
 	puts "ALL #{test_pass} TESTS PASSED!".green
 end
+
+sleep 5
 
 
 
