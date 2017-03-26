@@ -5,8 +5,8 @@ test_fail = 0
 test_errors = []
 
 driver = Selenium::WebDriver.for :chrome
-# driver.navigate.to 'http://localhost:3000'
-driver.navigate.to 'http://poeexchange.com/'
+driver.navigate.to 'http://localhost:3000'
+# driver.navigate.to 'http://poeexchange.com/'
 
 sleep 1
 
