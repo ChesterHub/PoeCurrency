@@ -11,3 +11,10 @@ namespace :script do
 
 	
 end
+
+namespace :test do
+	desc "Test basic functionality of Webpage"
+	task :basic => :environment do
+		ruby "test/seleniumTest.rb"
+	end
+end

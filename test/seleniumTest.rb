@@ -196,7 +196,7 @@ else
 	puts "ALL #{test_pass} TESTS PASSED!".green
 end
 
-sleep 5
+sleep 4
 
 
 
