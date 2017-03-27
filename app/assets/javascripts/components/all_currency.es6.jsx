@@ -59,7 +59,7 @@ class AllCurrency extends React.Component {
                 <i className="icons fa fa-tags money" aria-hidden="true"></i>Column<br/>
                 ND <span>=</span> Not enough data in chosen league</p>  
             <p id="table-title-two" className="fadeinslow">-FILTER-</p>
-            <form className="select-forms-third fadeinslow">
+            <form className="select-forms-fourth fadeinslow">
                 <select className="combo-boxes-table" onChange={this.changeFilter.bind(this)}>
                     <option selected="true" value="0" >All Time</option>
                     <option value="1">One Day Ago</option>
