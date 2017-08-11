@@ -86,7 +86,7 @@ def parse_html(league)
 	test_url = "http://currency.poe.trade/search?league=#{league}&online=x&want=1-2-3-4-5&have=1-2-3-4-5"
 
 	puts "Mining in #{league} league...."
-	document = open(test_url)
+	document = open(url)
 	content = document.read
 	parsed_doc = Nokogiri::HTML(content)
 
