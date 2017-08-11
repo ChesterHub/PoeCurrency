@@ -96,12 +96,14 @@ class Currency extends React.Component {
                     <optgroup label="Current">
     				<option value="Standard">Standard</option>
     				<option value="Hardcore">Hardcore</option>
-                    <option value="Legacy">Legacy</option>
-                    <option value="Hardcore+Legacy">Hardcore Legacy</option>
+                    <option value="Harbinger">Harbinger</option>
+                    <option value="Hardcore+Harbinger">Hardcore Harbinger</option>
                     </optgroup>
                     <optgroup label="Old">
-    				<option value="Breach">Breach</option>
-    				<option value="Hardcore+Breach">Hardcore Breach</option>
+                    <option value="Breach">Breach</option>
+                    <option value="Hardcore+Breach">Hardcore Breach</option>
+                    <option value="Legacy">Legacy</option>
+                    <option value="Hardcore+Legacy">Hardcore Legacy</option>
                     </optgroup>
     			</select>
     		</form>
