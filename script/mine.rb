@@ -14,12 +14,16 @@ league_types = [
 	"Breach",
 	"Hardcore+Breach",
 	"Legacy",
-	"Hardcore+Legacy"
+	"Hardcore+Legacy",
+	"Harbinger",
+	"Hardcore+Harbinger"
 ]
 
 old_leagues = [
 	"Breach",
-	"Hardcore+Breach"
+	"Hardcore+Breach",
+	"Legacy",
+	"Hardcore+Legacy"
 ]
 
 currency_offering = {
@@ -82,7 +86,7 @@ def parse_html(league)
 	test_url = "http://currency.poe.trade/search?league=#{league}&online=x&want=1-2-3-4-5&have=1-2-3-4-5"
 
 	puts "Mining in #{league} league...."
-	document = open(url)
+	document = open(test_url)
 	content = document.read
 	parsed_doc = Nokogiri::HTML(content)
 
@@ -172,7 +176,7 @@ def start_mining(league_array, currency_offering_array, currency_receiving_array
 		if old_leagues.include?(league)
 			puts "#{league} is an old league. Skipping..."
 		else
-			timer = rand(2..20)
+			timer = rand(2..5)
 			puts "Waiting #{timer} seconds..."
 			sleep(timer)
 			puts "Opening Url...."

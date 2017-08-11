@@ -10,7 +10,9 @@ league_types = [
 	"Breach",
 	"Hardcore+Breach",
 	"Legacy",
-	"Hardcore+Legacy"
+	"Hardcore+Legacy",
+	"Harbinger",
+	"Hardcore+Harbinger"
 ]
 
 # League_id hash
@@ -20,7 +22,9 @@ league_num_hash = {
 	"Breach" => 3,
 	"Hardcore+Breach" => 4,
 	"Legacy" => 5,
-	"Hardcore+Legacy" => 6
+	"Hardcore+Legacy" => 6,
+	"Harbinger" => 7,
+	"Hardcore+Harbinger" => 8
 }
 
 currency = [
